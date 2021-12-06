@@ -1,2 +1,2 @@
 # Archive
-Archive containing smaller resources and other miscellanea
+Full details at www.joaobrito.net/archive
