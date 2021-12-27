@@ -1,0 +1,4 @@
+sudo parted /dev/sdc --script mklabel gpt mkpart xfspart xfs 0% 100%
+sudo umount /second_disk
+lsblk -o NAME,HCTL,SIZE,MOUNTPOINT | grep -i "sd"
+sudo mount /dev/sda1 /second_disk
