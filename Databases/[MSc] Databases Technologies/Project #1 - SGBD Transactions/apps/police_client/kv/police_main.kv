@@ -1,0 +1,43 @@
+<PoliceMain>:
+    canvas.before:
+        Color:
+            rgba: (230/255, 242/255, 255/255, 0.8)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    
+    # ---------------------------------------------------------------------
+    # declaring some identifiers
+    label_police_name : label_police_name
+    # ---------------------------------------------------------------------
+
+    # -----------------------------------------------------------------------------------------
+    GridLayout: # ROOT GRIDLAYOUT
+        cols:1
+        size: root.width - 50, root.height -10
+        pos: 25, 5
+
+        Label:
+            id: label_police_name
+            text: "Esquadra PSP Covilhã"
+            color: (0.0, 0.0, 0.4, 1.0)
+            font_size: 45
+            bold: True
+
+        GridLayout: # 2 OPTIONS (NEW ACCIDENT OR SEARCH ACCIDENTS)
+            cols: 2
+            spacing: 30
+            size: root.width * 0.8, root.height * 0.8
+            row_default_height: 200
+            row_force_default: True
+
+            Button:
+                text:"Novo Acidente"
+                on_release: root.new_accident()
+                background_color: (0.0, 0.5, 1.0, 0.5)
+
+            Button:
+                text:"Pesquisar/Editar Acidentes"
+                on_release: root.search_accident()
+                background_color: (0.0, 0.5, 1.0, 0.5)
+    # -----------------------------------------------------------------------------------------

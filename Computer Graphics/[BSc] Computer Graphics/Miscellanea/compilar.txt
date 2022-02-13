@@ -1,0 +1,1 @@
+g++ teste.cpp -lglfw -lglew -framework OpenGL -o teste -std=c++11

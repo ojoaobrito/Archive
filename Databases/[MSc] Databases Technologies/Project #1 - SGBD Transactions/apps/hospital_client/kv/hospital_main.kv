@@ -1,0 +1,309 @@
+<HospitalMain>:
+    canvas.before:
+        Color:
+            rgba: (217/255, 217/255, 217/255, 1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    
+    # ---------------------------------------------------------------------
+    # declaring some identifiers
+
+    text_id_search : text_id_search
+    text_concelho_search : text_concelho_search
+
+    label_hospital_name : label_hospital_name
+    label_id_search : label_id_search
+    label_accident_km : label_accident_km
+    label_accident_km_value : label_accident_km_value
+    label_id_search_dashes : label_id_search_dashes
+    label_accident_description : label_accident_description
+    label_accident_description_value : label_accident_description_value
+    label_accident_location : label_accident_location
+    label_accident_location_value : label_accident_location_value
+    label_accident_timestamp : label_accident_timestamp
+    label_accident_timestamp_value : label_accident_timestamp_value
+    label_severely_injured : label_severely_injured
+    label_severely_injured_value : label_severely_injured_value
+    label_casualties : label_casualties
+    label_casualties_value : label_casualties_value
+    label_concelho_search : label_concelho_search
+    label_concelho_search_dashes : label_concelho_search_dashes
+    # ---------------------------------------------------------------------
+
+    # -----------------------------------------------------------------------------------------
+    GridLayout: # ROOT GRIDLAYOUT
+        cols:1
+        size: root.width - 50, root.height -10
+        pos: 25, 5
+
+        Label:
+            id: label_hospital_name
+            text: "Centro Hospitalar Cova da Beira"
+            color: (0.0, 0.0, 0.4, 1.0)
+            font_size: 45
+            bold: True
+
+        # ---------------------------------------------------------------
+        GridLayout: # ID SEARCH (LABEL)
+            cols: 2
+            spacing: 30
+
+            Label:
+                id: label_id_search
+                text: "Pesquisa por ID"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 20
+                bold: True
+
+            Label:
+                id: label_id_search_dashes
+                text: "-------------------------------------------------"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 25
+                bold: False
+        # ---------------------------------------------------------------
+
+        # -------------------------------------------------------------------------------------
+        GridLayout: # ID SEARCH (TEXT)
+            cols:2
+            spacing: 30
+            size: root.width * 0.8, root.height * 0.8
+            row_default_height: 50
+            row_force_default: True
+
+            TextInput:
+                id: text_id_search
+                multiline: False
+                on_text: root.update_padding(args[0])
+                padding_x: self.width/2 # initial padding
+                padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+
+            Button:
+                text:"Pesquisar"
+                on_release: root.id_search()
+                background_color: (0.0, 0.5, 1.0, 0.5)
+        # -------------------------------------------------------------------------------------
+
+        # -------------------------------------------
+        GridLayout: # ACCIDENT DESCRIPTION
+            cols:2
+            spacing: 30
+            size: root.width * 0.8, root.height * 0.8
+            row_default_height: 50
+            row_force_default: True
+
+            Label:
+                id: label_accident_description
+                text: "Descrição"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 15
+                bold: False
+
+            Label:
+                id: label_accident_description_value
+                text: "---"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 17
+                bold: True
+        # -------------------------------------------
+
+        # -------------------------------------------
+        GridLayout: # ACCIDENT LOCATION
+            cols:2
+            spacing: 30
+            size: root.width * 0.8, root.height * 0.8
+            row_default_height: 50
+            row_force_default: True
+
+            Label:
+                id: label_accident_location
+                text: "Localização"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 15
+                bold: False
+
+            Label:
+                id: label_accident_location_value
+                text: "---"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 17
+                bold: True
+        # -------------------------------------------
+
+        # -------------------------------------------
+        GridLayout: # ACCIDENT KM
+            cols:2
+            spacing: 30
+            size: root.width * 0.8, root.height * 0.8
+            row_default_height: 50
+            row_force_default: True
+
+            Label:
+                id: label_accident_km
+                text: "KM"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 15
+                bold: False
+
+            Label:
+                id: label_accident_km_value
+                text: "---"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 17
+                bold: True
+        # -------------------------------------------
+
+        # -------------------------------------------
+        GridLayout: # ACCIDENT TIMESTAMP
+            cols:2
+            spacing: 30
+            size: root.width * 0.8, root.height * 0.8
+            row_default_height: 50
+            row_force_default: True
+
+            Label:
+                id: label_accident_timestamp
+                text: "Data e Hora"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 15
+                bold: False
+
+            Label:
+                id: label_accident_timestamp_value
+                text: "---"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 17
+                bold: True
+        # -------------------------------------------
+
+        # ------------------------------------------------
+        GridLayout: # SEVERELY INJURED
+            cols: 2
+            size: root.width * 0.8, root.height * 0.8
+            row_default_height: 50
+            row_force_default: True
+            spacing: 30
+
+            Label:
+                id: label_severely_injured
+                text: "Feridos Graves"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 15
+                bold: False
+            
+            # --------------------------------------------
+            GridLayout: # EDIT SEVERELY INJURED
+                cols: 3
+                Button:
+                    text: "-"
+                    on_release: root.decrease_severely_injured()
+                    bold: True
+                    background_color: (0.0, 0.5, 1.0, 0.5)
+
+                Label:
+                    id: label_severely_injured_value
+                    text: "-"
+                    color: (0.0, 0.0, 0.4, 1.0)
+                    font_size: 20
+                    bold: True
+
+                Button:
+                    text: "+"
+                    on_release: root.increase_severely_injured()
+                    bold: True
+                    background_color: (0.0, 0.5, 1.0, 0.5)
+            # --------------------------------------------
+        # ------------------------------------------------
+
+        # ------------------------------------------------
+        GridLayout: # CASUALTIES
+            cols: 2
+            spacing: 30
+            size: root.width * 0.8, root.height * 0.8
+            row_default_height: 50
+            row_force_default: True
+
+            Label:
+                id: label_casualties
+                text: "Mortos"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 15
+                bold: False
+
+            # --------------------------------------------
+            GridLayout: # EDIT CASUALTIES
+                cols: 3
+                Button:
+                    text: "-"
+                    on_release: root.decrease_casualties()
+                    bold: True
+                    background_color: (0.0, 0.5, 1.0, 0.5)
+
+                Label:
+                    id: label_casualties_value
+                    text: "-"
+                    color: (0.0, 0.0, 0.4, 1.0)
+                    font_size: 20
+                    bold: True
+
+                Button:
+                    text: "+"
+                    on_release: root.increase_casualties()
+                    bold: True
+                    background_color: (0.0, 0.5, 1.0, 0.5)
+            # --------------------------------------------
+        # ------------------------------------------------
+
+        # ---------------------------------------------------------------
+        GridLayout: # SAVE BUTTON
+            cols: 1
+
+            Button:
+                text: "Guardar"
+                on_release: root.save()
+                bold: True
+                background_color: (0.0, 0.5, 1.0, 0.5)
+        # ---------------------------------------------------------------
+
+        # ---------------------------------------------------------------
+        GridLayout: # "CONCELHO" SEARCH (LABEL)
+            cols: 2
+            spacing: 30
+
+            Label:
+                id: label_concelho_search
+                text: "Pesquisa por Concelho"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 20
+                bold: True
+
+            Label:
+                id: label_concelho_search_dashes
+                text: "-------------------------------------------------"
+                color: (0.0, 0.0, 0.4, 1.0)
+                font_size: 25
+                bold: False
+        # ---------------------------------------------------------------
+        
+        # -------------------------------------------------------------------------------------
+        GridLayout: # "CONCELHO" SEARCH (TEXT)
+            cols: 2
+            spacing: 30
+            size: root.width * 0.8, root.height * 0.8
+            row_default_height: 50
+            row_force_default: True
+
+            TextInput:
+                id: text_concelho_search
+                multiline: False
+                on_text: root.update_padding(args[0])
+                padding_x: self.width/2 # initial padding
+                padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+            
+            Button:
+                text: "Pesquisar"
+                on_release: root.concelho_search()
+                background_color: (0.0, 0.5, 1.0, 0.5)
+        # -------------------------------------------------------------------------------------
+    # -----------------------------------------------------------------------------------------

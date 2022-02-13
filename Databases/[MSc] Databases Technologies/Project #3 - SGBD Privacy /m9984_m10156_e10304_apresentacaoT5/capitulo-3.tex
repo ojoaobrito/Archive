@@ -1,0 +1,29 @@
+\chapter{Como dar garantias ao utilizador de que a gestão de dados é bem feita?}
+\label{chap3:garantias}
+
+\section{Introdução}
+\label{chap3:intro}
+No capítulo anterior foram abordados princípios e problemáticas no contexto da gestão de dados. Assim, o presente capítulo tratará de apontar várias formas de dar garantias aos utilizadores de que os dados são bem geridos.
+
+\section{Procedimentos a adotar}
+\label{chap3:procedimentos}
+A confiança tem tanto de percetual como de real. Por um lado, no contexto de um \ac{SGBD} podem ser aplicadas técnicas que inspiram confiança e segurança. Por outro lado, os utilizadores têm de ter, no mínimo, a sensação de que os seus dados estão sob a alçada de profissionais merecedores de confiança. 
+
+Como tal, alguns procedimentos \cite{etica} podem ser incorporados, visando os ideais acima descritos:
+
+\begin{itemize}
+    \item Guardar, manter e distribuir (se necessário) registos de alterações, edições e manipulações em geral dos dados em posse da empresa/entidade em questão;
+    \item Realizar \textit{backups} automáticos e regulares - tomando como exemplo o \ac{SGBD} PostgreSQL, o comando \textit{pg\_dump} é usado com este fim;
+    \item Encriptar dados sensíveis (como \textit{passwords}, por exemplo) e referir na documentação (que tem que existir) as funções criptográficas usadas. Deste modo, são públicas as potenciais debilidades dos algoritmos escolhidos;
+    \item Atribuir privilégios de acesso adequados ao tipo de utilizador;
+    \item Informar os utilizadores de toda e qualquer alteração aos termos de utilização de dados;
+    \item Obter o consentimento dos utilizadores aquando da manipulação de dados;
+    \item Impedir tentativas de ataque ou acesso indevido aos dados - no PostgreSQL a função \textit{pg\_escape\_string()} é usada para filtrar o input de possíveis carateres mal intencionados e que poderão alterar o sentido das \textit{queries} usadas;
+    \item Otimizar e melhorar regularmente as configurações do \ac{SGBD} usado - ferramentas como o PGTune são comummente citadas neste contexto.
+\end{itemize}
+
+De um modo geral, a postura transparente de qualquer entidade que possua dados privados deve ser visível por todos. Uma documentação rigorosa, aplicação de funcionalidades disponibilizadas pelo \ac{SGBD} usado e boas práticas da indústria, fazem parte de uma estratégia que se quer respeitosa para com o utilizador final.
+
+\section{Conclusão}
+\label{chap3:conclusao}
+O capítulo que agora termina apresentou vários procedimentos com vista a aumentar a transparência e confiança percebidas por parte dos utilizadores. Foram apontados alguns exemplos na prática, confirmando que os \ac{SGBD} actuais apostam cada vez mais numa gestão de dados realmente bem feita.

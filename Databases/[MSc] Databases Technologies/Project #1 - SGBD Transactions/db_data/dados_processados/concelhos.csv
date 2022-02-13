@@ -1,0 +1,279 @@
+IdConcelho$Nome$IdDistrito
+1$Agueda$1
+2$Albergaria-a-Velha$1
+3$Anadia$1
+4$Arouca$1
+5$Aveiro$1
+6$Castelo de Paiva$1
+7$Espinho$1
+8$Estarreja$1
+9$Ilhavo$1
+10$Mealhada$1
+11$Murtosa$1
+12$Oliveira de Azemeis$1
+13$Oliveira do Bairro$1
+14$Ovar$1
+15$Santa Maria da Feira$1
+16$Sao Joao da Madeira$1
+17$Sever do Vouga$1
+18$Vagos$1
+19$Vale de Cambra$1
+20$Aljustrel$2
+21$Almodovar$2
+22$Alvito$2
+23$Barrancos$2
+24$Beja$2
+25$Castro Verde$2
+26$Cuba$2
+27$Ferreira do Alentejo$2
+28$Mertola$2
+29$Moura$2
+30$Odemira$2
+31$Ourique$2
+32$Serpa$2
+33$Vidigueira$2
+34$Amares$3
+35$Barcelos$3
+36$Braga$3
+37$Cabeceiras de Basto$3
+38$Celorico de Basto$3
+39$Esposende$3
+40$Fafe$3
+41$Guimaraes$3
+42$Povoa de Lanhoso$3
+43$Terras de Bouro$3
+44$Vieira do Minho$3
+45$Vila Nova de Famalicao$3
+46$Vila Verde$3
+47$Vizela$3
+48$Alfandega da Fe$4
+49$Braganca$4
+50$Carrazeda de Ansiaes$4
+51$Freixo Espada a Cinta$4
+52$Macedo de Cavaleiros$4
+53$Miranda do Douro$4
+54$Mirandela$4
+55$Mogadouro$4
+56$Torre de Moncorvo$4
+57$Vila Flor$4
+58$Vimioso$4
+59$Vinhais$4
+60$Belmonte$5
+61$Castelo Branco$5
+62$Covilha$5
+63$Fundao$5
+64$Idanha-a-Nova$5
+65$Oleiros$5
+66$Penamacor$5
+67$Proenca-a-Nova$5
+68$Serta$5
+69$Vila Velha de Rodao$5
+70$Vila de Rei$5
+71$Arganil$6
+72$Cantanhede$6
+73$Coimbra$6
+74$Condeixa-a-Nova$6
+75$Figueira da Foz$6
+76$Gois$6
+77$Lousa$6
+78$Mira$6
+79$Miranda do Corvo$6
+80$Montemor-o-Velho$6
+81$Oliveira do Hospital$6
+82$Pampilhosa da Serra$6
+83$Penacova$6
+84$Penela$6
+85$Soure$6
+86$Tabua$6
+87$Vila Nova de Poiares$6
+88$Albufeira$7
+89$Alcoutim$7
+90$Aljezur$7
+91$Castro Marim$7
+92$Faro$7
+93$Lagoa (Algarve)$7
+94$Lagos$7
+95$Loule$7
+96$Monchique$7
+97$Olhao$7
+98$Portimao$7
+99$Sao Bras de Alportel$7
+100$Silves$7
+101$Tavira$7
+102$Vila Real de SantoAntonio$7
+103$Vila do Bispo$7
+104$Aguiar da Beira$8
+105$Almeida$8
+106$Celorico da Beira$8
+107$Figueira de CasteloRodrigo$8
+108$Fornos de Algodres$8
+109$Gouveia$8
+110$Guarda$8
+111$Manteigas$8
+112$Meda$8
+113$Pinhel$8
+114$Sabugal$8
+115$Seia$8
+116$Trancoso$8
+117$Vila Nova de Foz Coa$8
+118$Alcobaca$9
+119$Alvaiazere$9
+120$Ansiao$9
+121$Batalha$9
+122$Bombarral$9
+123$Caldas da Rainha$9
+124$Castanheira de Pera$9
+125$Figueiro dos Vinhos$9
+126$Leiria$9
+127$Marinha Grande$9
+128$Nazare$9
+129$Obidos$9
+130$Pedrogao Grande$9
+131$Peniche$9
+132$Pombal$9
+133$Porto de Mos$9
+134$Alenquer$10
+135$Amadora$10
+136$Arruda dos Vinhos$10
+137$Azambuja$10
+138$Cadaval$10
+139$Cascais$10
+140$Lisboa$10
+141$Loures$10
+142$Lourinha$10
+143$Mafra$10
+144$Odivelas$10
+145$Oeiras$10
+146$Sintra$10
+147$Sobral Monte Agraco$10
+148$Torres Vedras$10
+149$Vila Franca de Xira$10
+150$Alter do Chao$11
+151$Arronches$11
+152$Avis$11
+153$Campo Maior$11
+154$Castelo de Vide$11
+155$Crato$11
+156$Elvas$11
+157$Fronteira$11
+158$Gaviao$11
+159$Marvao$11
+160$Monforte$11
+161$Nisa$11
+162$Ponte de Sor$11
+163$Portalegre$11
+164$Sousel$11
+165$Amarante$12
+166$Baiao$12
+167$Felgueiras$12
+168$Gondomar$12
+169$Lousada$12
+170$Maia$12
+171$Marco de Canaveses$12
+172$Matosinhos$12
+173$Pacos de Ferreira$12
+174$Paredes$12
+175$Penafiel$12
+176$Porto$12
+177$Povoa de Varzim$12
+178$Santo Tirso$12
+179$Trofa$12
+180$Valongo$12
+181$Vila Nova de Gaia$12
+182$Vila do Conde$12
+183$Abrantes$13
+184$Alcanena$13
+185$Almeirim$13
+186$Alpiarca$13
+187$Benavente$13
+188$Cartaxo$13
+189$Chamusca$13
+190$Constancia$13
+191$Coruche$13
+192$Entroncamento$13
+193$Ferreira do Zezere$13
+194$Golega$13
+195$Macao$13
+196$Ourem$13
+197$Rio Maior$13
+198$Salvaterra de Magos$13
+199$Santarem$13
+200$Sardoal$13
+201$Tomar$13
+202$Torres Novas$13
+203$Vila Nova da Barquinha$13
+204$Alcacer do Sal$14
+205$Alcochete$14
+206$Almada$14
+207$Barreiro$14
+208$Grandola$14
+209$Moita$14
+210$Montijo$14
+211$Palmela$14
+212$Santiago do Cacem$14
+213$Seixal$14
+214$Sesimbra$14
+215$Setubal$14
+216$Sines$14
+217$Arcos de Valdevez$15
+218$Caminha$15
+219$Melgaco$15
+220$Moncao$15
+221$Paredes de Coura$15
+222$Ponte da Barca$15
+223$Ponte de Lima$15
+224$Valenca$15
+225$Viana do Castelo$15
+226$Vila Nova de Cerveira$15
+227$Alijo$16
+228$Boticas$16
+229$Chaves$16
+230$Mesao Frio$16
+231$Mondim de Basto$16
+232$Montalegre$16
+233$Murca$16
+234$Peso da Regua$16
+235$Ribeira de Pena$16
+236$Sabrosa$16
+237$Santa Marta dePenaguiao$16
+238$Valpacos$16
+239$Vila Pouca de Aguiar$16
+240$Vila Real$16
+241$Armamar$17
+242$Carregal do Sal$17
+243$Castro Daire$17
+244$Cinfaes$17
+245$Lamego$17
+246$Mangualde$17
+247$Moimenta da Beira$17
+248$Mortagua$17
+249$Nelas$17
+250$Oliveira de Frades$17
+251$Penalva do Castelo$17
+252$Penedono$17
+253$Resende$17
+254$Santa Comba Dao$17
+255$Sao Joao da Pesqueira$17
+256$Sao Pedro do Sul$17
+257$Satao$17
+258$Sernancelhe$17
+259$Tabuaco$17
+260$Tarouca$17
+261$Tondela$17
+262$Vila Nova de Paiva$17
+263$Viseu$17
+264$Vouzela$17
+265$Alandroal$18
+266$Arraiolos$18
+267$Borba$18
+268$Estremoz$18
+269$Evora$18
+270$Montemor-o-Novo$18
+271$Mora$18
+272$Mourao$18
+273$Portel$18
+274$Redondo$18
+275$Reguengos de Monsaraz$18
+276$Vendas Novas$18
+277$Viana do Alentejo$18
+278$Vila Vicosa$18

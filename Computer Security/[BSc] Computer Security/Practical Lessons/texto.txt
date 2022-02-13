@@ -1,0 +1,12 @@
+Think your password is unique and clever? A new inforgraphic from security firm Rapid7 has revealed the top passwords stolen from this week's LinkedIn security breach. There are hundreds of duplicates and patterns associated with the compromised log-in information.
+
+"Link" was the number one hacked password, according to Rapid7. But many other LinkedIn users also picked passwords — "work" and "job" for example — that were associated with the career site's content.
+
+Religion was also a popular password topic — "god," "angel" and "jesus" also made the top 15. Number sequences such as "1234" and "12345" also made the list.
+
+SEE ALSO: How to Check If Your LinkedIn Password Was Stolen
+Earlier this week, rumors circulated that 6.5 million LinkedIn passwords were subject to a security breach. A Russian hacker said he stole 6,458,020 encrypted passwords and posted them online (without usernames) to prove his feat. LinkedIn has since confirmed the rumors to be true and apologized for the inconvenience it has caused users.
+
+The breach comes on the heels of news that LinkedIn’s iOS app potentially violates user privacy by sending detailed calendar entries to its servers.
+
+For a full look, check out the infographic below. If you use a password that made the top 30 for any of the sites you access, you may want to consider opting for a more secure one that features letters, numbers and symbols.

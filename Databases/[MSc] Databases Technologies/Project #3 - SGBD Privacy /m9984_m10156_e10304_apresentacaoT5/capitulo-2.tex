@@ -1,0 +1,34 @@
+\chapter{Gestão de dados: onde começam e acabam os limites?}
+\label{chap2:limites}
+
+\section{Introdução}
+\label{chap2:intro}
+As aplicações computacionais atuais são cada vez mais capazes e poderosas, no que toca a funcionalidades apelativas ao utilizador. Como tal, pode surgir a necessidade de extrair o máximo de informação dos dados, de modo a oferecer uma experiência mais personalizada. Esta estratégia pode-se revelar adequada (os dados dos utilizadores podem revelar perspetivas inexploradas), mas também recheada de riscos (existe uma fina linha entre a análise a a exploração abusiva).
+
+\section{Análise de dados}
+\label{chap2:analise}
+Nos últimos anos, a preocupação com o manuseamento de dados tem vindo a ganhar cada vez mais atenção. O design de processos e modelos começa a elevar a relação com o utilizador a um caráter inviolável. Se o utilizador confia na empresa/entidade para guardar os seus dados potencialmente sensíveis, por que motivo quebrar tal confiança?
+
+A verdade é que, como já foi referido, a aposta parece ser cada vez mais na extração de conhecimento a partir de dados puramente factuais. Como exemplo, imagine-se que numa \ac{BD} (gerida por um \ac{SGBD}) existem dados geográficos. Tais dados teriam sido recolhidos com o consentimento do utilizador, mas, por via da mineração destes dados, são calculados alguns trajetos e rotas que os utilizadores fizeram. Daqui seria possível extrair hábitos de deslocação, avaliar por que lojas ou espaços o utilizador costuma passar ou quais os horários nos quais o utilizador não está em casa.
+
+O exemplo acima concretiza o que tem sido preconizado neste capítulo: a barreira entre o tratamento dos dados e a manipulação excessiva é ténue. Depende da entidade responsável a aplicação de diretrizes fundamentais, como as que se apresentam na secção seguinte.
+
+\section{Princípios fundamentais}
+\label{chap3:principios}
+
+Na presente secção serão apresentados alguns princípios éticos \cite{principios} que qualquer profissional envolvido com a gestão de dados (em qualquer contexto) deve seguir:
+
+\begin{itemize}
+    \item Respeitar a privacidade dos utilizadores, nunca partilhando ou colocando em risco os dados mais sensíveis;
+    \item Preservar a integridade da informação (a alteração e manipulação dos dados é da responsabilidade dos utilizadores) - nos \ac{SGBD} atuais, \textit{logging} auxilia nesta tarefa;
+    \item Garantir que a organização dos dados beneficia os utilizadores e nunca interesses de terceiros - as tabelas e relações devem ser pensadas do ponto de vista do utilizador e da realidade em que estes se encontram;
+    \item Avaliar constantemente se os resultados que se pretendem atingir, precisam realmente de uma manipulação de dados intensiva. Se é possível obter os mesmos resultados de uma forma menos dependente de dados, essa via deve ser privilegiada;
+    \item Respeitar todos os utilizadores de forma igualitária;
+    \item Considerar cada utilização de dados, de modo a reduzir riscos desnecessários.
+\end{itemize}
+
+Em suma, deve reinar o bom senso acima de tudo. Os dados que o utilizadores confiam à empresa ou entidade que os trata são uma prova de confiança, que não deve ser quebrada. 
+
+\section{Conclusão}
+\label{chap2:conclusao}
+Ao longo do presente capítulo foi discutida a temática da gestão de dados, com algumas pontes para os \ac{SGBD} e \ac{BD} atuais. Na secção seguinte serão discutidas formas de aumentar a transparência na gestão de dados.

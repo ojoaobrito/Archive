@@ -1,0 +1,31 @@
+<PoliceSuccessful>:
+    canvas.before:
+        Color:
+            rgba: (230/255, 242/255, 255/255, 0.8)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    # -----------------------------------------------------------------------------------------
+    GridLayout: # ROOT GRIDLAYOUT
+        cols:1
+        size: root.width - 50, root.height -10
+        pos: 25, 25
+
+        Label:
+            text: "Update guardado\ncom sucesso!"
+            color: (0.0, 0.0, 0.4, 1.0)
+            font_size: 20
+            bold: True
+            width: 200
+            size_hint_x: None
+            halign: 'center'
+
+        Button:
+            text:"OK"
+            on_release: root.ok_button()
+            background_color: (0.0, 0.5, 1.0, 0.5)
+            size: 200, 50
+            pos: 125, 100
+            size_hint: None, None
+    # -----------------------------------------------------------------------------------------

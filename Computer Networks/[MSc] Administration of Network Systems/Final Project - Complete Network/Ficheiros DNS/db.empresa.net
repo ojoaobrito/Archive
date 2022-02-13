@@ -1,0 +1,19 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	dnspc.empresa.net. root.empresa.net. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+empresa.net.	IN	NS	dnspc.empresa.net.
+empresa.net.	IN	A	193.136.1.4
+;@	IN	A	127.0.0.1
+;@	IN	AAAA	::1
+dnspc	IN	A	193.136.1.4
+router	IN	A	193.136.1.1
+outer	IN	A	192.0.0.2
+intra	IN	A	1.0.0.6

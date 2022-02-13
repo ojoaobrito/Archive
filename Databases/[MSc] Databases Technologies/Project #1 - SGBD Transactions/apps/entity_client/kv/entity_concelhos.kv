@@ -1,0 +1,17 @@
+<EntityConcelhos>:
+    canvas.before:
+        Color:
+            rgba: (230/255, 242/255, 255/255, 0.8)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    box : box
+    
+    BoxLayout:
+        id: box
+        size: (600,450)
+        orientation: 'vertical'
+        size_hint_y: None
+        height: self.minimum_height
+    # -----------------------------------------------------------------------------------------

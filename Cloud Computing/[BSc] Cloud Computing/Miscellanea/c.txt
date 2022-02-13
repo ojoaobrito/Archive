@@ -1,0 +1,99 @@
+CHAMADA                 ,           VALOR
+------------------------------------------------
+PASSO 1
+Recursiva(X, 5)         ,           ?
+
+PASSO 2
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           ?
+
+PASSO 3
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           ?
+V[3]/Recursiva(V,3)     ,           ?
+
+PASSO 4
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           ?
+V[3]/Recursiva(V,3)     ,           ?
+V[2]/Recursiva(V,2)     ,           ?
+
+PASSO 5
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           ?
+V[3]/Recursiva(V,3)     ,           ?
+V[2]/Recursiva(V,2)     ,           ?
+Recursiva(V,1)
+
+PASSO 6
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           ?
+V[3]/Recursiva(V,3)     ,           ?
+V[2]/Recursiva(V,2)     ,           ?
+Recursiva(V,1)          ,           ?
+V[0]/Recursiva(V,0)     ,           ?
+
+PASSO 7
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           ?
+V[3]/Recursiva(V,3)     ,           ?
+V[2]/Recursiva(V,2)     ,           ?
+Recursiva(V,1)          ,           ?
+V[0]/Recursiva(V,0)     ,           ?
+return 1                ,           1
+
+PASSO 8
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           ?
+V[3]/Recursiva(V,3)     ,           ?
+V[2]/Recursiva(V,2)     ,           ?
+Recursiva(V,1)          ,           ?
+V[0]/Recursiva(V,0)     ,           1 (1/1)
+return 1                ,           1
+
+PASSO 9
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           ?
+V[3]/Recursiva(V,3)     ,           ?
+V[2]/Recursiva(V,2)     ,           ?
+Recursiva(V,1)          ,           1
+V[0]/Recursiva(V,0)     ,           1 (1/1)
+return 1                ,           1
+
+PASSO 10
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           ?
+V[3]/Recursiva(V,3)     ,           ?
+V[2]/Recursiva(V,2)     ,           13 (13/1)
+Recursiva(V,1)          ,           1
+V[0]/Recursiva(V,0)     ,           1 (1/1)
+return 1                ,           1
+
+PASSO 11
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           ?
+V[3]/Recursiva(V,3)     ,           1 (15/13)
+V[2]/Recursiva(V,2)     ,           13 (13/1)
+Recursiva(V,1)          ,           1
+V[0]/Recursiva(V,0)     ,           1 (1/1)
+return 1                ,           1
+
+PASSO 12
+Recursiva(X, 5)         ,           ?
+V[4]/Recursiva(V,4)     ,           17 (17/1)
+V[3]/Recursiva(V,3)     ,           1 (15/13)
+V[2]/Recursiva(V,2)     ,           13 (13/1)
+Recursiva(V,1)          ,           1
+V[0]/Recursiva(V,0)     ,           1 (1/1)
+return 1                ,           1
+
+PASSO 13
+>>> Recursiva(X, 5)     ,           17 <<<
+V[4]/Recursiva(V,4)     ,           17 (17/1)
+V[3]/Recursiva(V,3)     ,           1 (15/13)
+V[2]/Recursiva(V,2)     ,           13 (13/1)
+Recursiva(V,1)          ,           1
+V[0]/Recursiva(V,0)     ,           1 (1/1)
+return 1                ,           1
+
+VALOR FINAL: 17

@@ -1,0 +1,52 @@
+\chapter{Mecanismos de proteção de dados}
+\label{chap5:mecanismos}
+
+\section{Introdução}
+\label{chap5:intro}
+
+Nos dias de hoje proteção e segurança de dados é algo extremamente importante para as companhias que processam com regularidade dados pessoais. Estas deveriam integrar a proteção de dados no processo para garantir a conformidade com o \ac{RGPD}.
+O \ac{RGPD} pode ser resumido a um requisito simples: garantir que os dados estejam seguros. Se tal se verificar, não será necessário haver tantas preocupações  e todos os problemas que possam surgir tornam-se muito mais fáceis de resolver. Segue-se uma lista dos métodos de proteção de dados mais utilizados, que ajudam a manter a conformidade com o \ac{RGPD}.
+
+\section{Métodos de proteção de dados}
+\subsection{Avaliação de Risco}
+
+Quanto mais arriscados forem os dados, mais proteção estes devem ter. Dados confidenciais devem ser cuidadosamente protegidos, enquanto que dados de baixo risco podem ter menos proteção. O principal motivo destas avaliações é o custo-benefício, pois melhor segurança de dados envolve uma maior despesa. No entanto, é um bom teste determinar quais os dados que precisam de ser melhor protegidos de modo a tornar todo o sistema de processamento de dados mais eficiente.
+
+Existem dois eixos nos quais a avaliação de riscos deve ser baseada:
+\begin{itemize}
+    \item A gravidade dos danos no caso de uma violação de dados;
+    \item A probabilidade de uma violação de dados.
+\end{itemize}
+
+Quanto maior for o risco em cada um desses eixos, mais cuidado se deve ter com os dados. Estas avaliações geralmente exigem a assistência de um responsável pela proteção de dados (responsável pela privacidade) que ajuda a estabelecer regras básicas.
+
+\subsection{\textit{Backups}}
+
+Os \textit{backups} são um método utilizado para impedir a perda de dados que geralmente pode ocorrer devido a erro do utilizador ou mau funcionamento técnico. Os \textit{backups} devem ser feitos e atualizados regularmente, pois apesar de imporem um custo adicional evitam possíveis interrupções nas operações comerciais normais que custam ainda mais. 
+Os \textit{backups} devem ser executados de acordo com o princípio explicado anteriormente - dados de baixa importância não necessitam de ser copiados com tanta frequência, ao contrário de dados confidenciais. Estes \textit{backups} devem ser armazenados num local seguro e possivelmente criptografados e nunca se deve armazenar dados confidenciais na cloud. 
+
+\subsection{Encriptação}
+
+O dados de alto risco são os principais candidatos ao uso de criptografia em todos os seus passos, ou seja, durante a aquisição (protocolos criptográficos on-line), processamento (criptografia de memória completa) e armazenamento subsequente (RSA ou AES). Dados bem encriptados são inerentemente seguros, mesmo nos casos de violação de dados, estes serão inúteis e irrecuperáveis para os invasores.
+Por este motivo, a criptografia é mencionada explicitamente como um método de proteção de dados no \ac{RGPD}, o que significa que o seu uso adequado certamente trará favores aos olhos dos reguladores. Por exemplo, se houver uma violação que afeta os dados criptografados, não será necessário denunciá-los às autoridades de supervisão, pois os dados são considerados adequadamente protegidos. Por este motivo, criptografia deve ser considerada como o método número 1 de segurança de dados.
+
+\subsection{Pseudonimização}
+
+A pseudonimização é outro método proposto no \ac{RGPD} que aumenta a segurança e a privacidade dos dados dos indivíduos. Este funciona bem com conjuntos maiores de dados e consiste em remover informações de identificação de trechos de dados. Por exemplo, substituir os nomes de pessoas por sequências geradas aleatoriamente, a identidade de uma pessoa e os dados que eles forneceram tornam-se impossíveis de vincular.
+O resultado ainda são dados úteis, mas não contêm mais informações sensíveis identificáveis. Como as pessoas não podem ser identificadas diretamente a partir de dados pseudonimizados, os procedimentos no caso de violação ou perda de dados são muito mais simples e os riscos são bastante reduzidos. O \ac{RGPD} reconhece isso e os requisitos de notificação foram significativamente reduzidos em caso de violações de dados pseudonimizados.
+A pseudonimização também é essencial na realização de pesquisas científicas ou estatísticas, pelo que instituições e escolas se deveriam focar na pseudonimização adequada dos seus dados.
+
+\subsection{Controlo de Acesso}
+
+A introdução a controlos de acesso ao fluxo de trabalho é um método de redução de risco muito eficiente. Quanto menos pessoas tiverem acesso aos dados, menor o risco de violação ou perda (inadvertida) de dados será.
+Deve-se garantir o acesso a dados confidenciais apenas a funcionários confiáveis que tenham um motivo válido para aceder a estes. É recomendado que se realize regularmente cursos de educação e atualização de manipulação de dados, principalmente após a contratação de novos funcionários. Também é recomendado elaborar uma politica de proteção de dados clara e concisa, descrevendo os métodos, funções e responsabilidades de cada funcionário (ou grupo de funcionários).
+
+\subsection{Destruição}
+
+Pode chegar um momento em que os dados que se possui necessitam de ser destruídos. A destruição de dados pode não parecer um método de proteção à primeira vista, mas na verdade é. Os dados estão a ser protegidos desta maneira contra recuperação e acesso não autorizado. De acordo com o \ac{RGPD}, devem-se excluir os dados dos quais não se necessita, sendo que, quanto maior for o grau de confidencialidade, mais eficazes deverão ser os métodos de destruição usados.
+Os discos rígidos são destruídos com mais frequência através de desmagnetização, enquanto que documentos em papel, CDs e unidades de fita são triturados em pedaços pequenos. A destruição de dados no local é recomendada para dados confidenciais. Os dados encriptados podem ser facilmente excluídos simplesmente destruindo as chaves que permitem a desencriptação, garantindo assim que os dados se mantêm ilegíveis.
+
+
+\section{Conclusão}
+
+Em suma, a proteção de dados é algo crucial nos dias hoje. Todos os métodos referidos anteriormente ajudam a manter uma base de dados mais segura e em conformidade com o \ac{RGPD}, o que deve ser do interesse geral pois ajuda a garantir a segurança, bem como, facilitar a resolução de possíveis problemas. 

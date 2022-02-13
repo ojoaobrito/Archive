@@ -1,0 +1,37 @@
+    PKCS#3 DH Parameters: (512 bit)
+        prime:
+            00:fd:d3:32:d9:7f:df:3d:fa:8d:4b:af:a7:11:00:
+            f5:4a:d5:9a:17:a3:43:ca:93:02:73:38:5c:2a:dd:
+            ce:8d:cb:75:85:a0:86:c5:73:87:37:b9:48:35:99:
+            18:30:37:1e:e4:3a:02:c4:1f:5a:ea:a3:b6:c8:48:
+            82:c2:5a:13:eb
+        generator: 2 (0x2)
+#ifndef HEADER_DH_H
+#include <openssl/dh.h>
+#endif
+DH *get_dh512()
+	{
+	static unsigned char dh512_p[] = {
+		0xFD, 0xD3, 0x32, 0xD9, 0x7F, 0xDF, 0x3D, 0xFA, 0x8D, 0x4B, 0xAF, 0xA7, 
+		0x11, 0x00, 0xF5, 0x4A, 0xD5, 0x9A, 0x17, 0xA3, 0x43, 0xCA, 0x93, 0x02, 
+		0x73, 0x38, 0x5C, 0x2A, 0xDD, 0xCE, 0x8D, 0xCB, 0x75, 0x85, 0xA0, 0x86, 
+		0xC5, 0x73, 0x87, 0x37, 0xB9, 0x48, 0x35, 0x99, 0x18, 0x30, 0x37, 0x1E, 
+		0xE4, 0x3A, 0x02, 0xC4, 0x1F, 0x5A, 0xEA, 0xA3, 0xB6, 0xC8, 0x48, 0x82, 
+		0xC2, 0x5A, 0x13, 0xEB, 
+		};
+	static unsigned char dh512_g[] = {
+		0x02, 
+		};
+	DH *dh;
+
+	if ((dh = DH_new()) == NULL) return(NULL);
+	dh->p = BN_bin2bn(dh512_p, sizeof(dh512_p), NULL);
+	dh->g = BN_bin2bn(dh512_g, sizeof(dh512_g), NULL);
+	if ((dh->p == NULL) || (dh->g == NULL))
+		{ DH_free(dh); return(NULL); }
+	return(dh);
+	}
+-----BEGIN DH PARAMETERS-----
+MEYCQQD90zLZf989+o1Lr6cRAPVK1ZoXo0PKkwJzOFwq3c6Ny3WFoIbFc4c3uUg1
+mRgwNx7kOgLEH1rqo7bISILCWhPrAgEC
+-----END DH PARAMETERS-----
