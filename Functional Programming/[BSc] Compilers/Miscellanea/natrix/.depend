@@ -1,0 +1,20 @@
+compile.cmo : x86.cmi ast.cmi compile.cmi
+compile.cmx : x86.cmx ast.cmi compile.cmi
+compile_old.cmo : ast.cmi
+compile_old.cmx : ast.cmi
+lexer.cmo : parser.cmi
+lexer.cmx : parser.cmx
+main.cmo : parser.cmi lexer.cmo compile.cmi
+main.cmx : parser.cmx lexer.cmx compile.cmx
+ocaml.cmo :
+ocaml.cmx :
+parser.cmo : ast.cmi parser.cmi
+parser.cmx : ast.cmi parser.cmi
+teste.cmo :
+teste.cmx :
+x86.cmo : x86.cmi
+x86.cmx : x86.cmi
+ast.cmi :
+compile.cmi : ast.cmi
+parser.cmi : ast.cmi
+x86.cmi :

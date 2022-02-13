@@ -1,0 +1,8 @@
+// teste negativo de fatorial (o número a testar é o que está na variável "num")
+
+var num : int = 5 ;
+var fatorial : int = 1 ;
+
+foreach i in 1..num do { fatorial = fatorial * i ;  }
+
+print(fatorial)

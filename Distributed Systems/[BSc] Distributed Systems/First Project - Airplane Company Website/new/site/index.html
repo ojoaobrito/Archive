@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title> Airplanes </title>
+    </head>
+    <body>
+        
+        <p id="line"></p>
+        <p id="debbug"></p>
+
+        <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+        <script type = "text/javascript">
+
+            document.body.style = "background-color: #e6f2ff;"
+            var titulo = document.createElement("h1");
+            titulo.innerHTML = "Voos";
+            titulo.style = "font-size: 35px; width: 100%; text-align: center; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: black"
+            document.body.appendChild(titulo);
+
+            var hr = document.createElement("hr")
+            hr.style = " border:none; height: 30px; width: 55%; height: 50px; margin-top: 0; border-bottom: 1px solid #4d88ff; box-shadow: 0 20px 20px -20px #333; margin: -70px auto 10px;"
+            document.body.appendChild(hr);
+
+        </script>
+
+        <div id="table_flights" style="width: 100%; text-align: center; margin-top: 15px;"></div>
+
+        <div id="table_flights_centre" style="width: 100%; text-align: center; margin-top: 15px;"></div>
+
+        <div id="table_flights_new" style="width: 100%; text-align: center; margin-top: 15px;"></div>
+
+        <script>
+                
+            function get_string_hora( segundos ){
+                
+                var segundos_int = parseInt( segundos )
+                var horas = 0
+                var segundos = 0
+
+                while( segundos_int > 60 ){
+                    segundos_int -= 60
+                    horas += 1
+                }
+
+                return horas.toString() + ":" + segundos.toString()
+            }
+
+            $.ajax({
+
+                type : "POST",
+                url : "http:/localhost:8081/flight_list",
+                crossDomain : true,
+                dataType : "application/json",
+                data : {},
+                success : function( data ){
+                    
+                    console.log( data )
+                    var data_fligth=JSON.parse( data )
+                    var flight_list = data_fligth.planes
+
+                    var tbl_flight = document.getElementById( 'table_flights' )
+                    var tbl_flight_tr = document.createElement( "table_flight_tr" )
+                    
+                    tbl_flight_tr.style = "background-color: #d9d9d9; border: 1px solid #808080; box-shadow: 0px 2px 5px #000000; -webkit-box-shadow: 0px 2px 5px #000000; -moz-box-shadow: 0px 2px 5px #000000; width: 100%; padding: 5px 10px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+
+                    var keys = Object.keys( flight_list )
+
+                    var new_row = document.createElement( "tr" )
+                        
+                    var temp = document.createElement( "td" )
+                    temp.innerHTML = "País Partida"
+                    temp.style = "padding: 0px 10px; font-weight: bold"
+
+                    new_row.appendChild(temp)
+
+                    var temp = document.createElement( "td" )
+                    temp.innerHTML = "País Chegada"
+                    temp.style = "padding: 0px 10px; font-weight: bold"
+
+                    new_row.appendChild(temp)
+
+                    var temp = document.createElement( "td" )
+                    temp.innerHTML = "Dia Partida"
+                    temp.style = "padding: 0px 10px; font-weight: bold"
+                    new_row.appendChild(temp)
+
+                    var temp = document.createElement( "td" )
+                    temp.innerHTML = "Hora Partida"
+                    temp.style = "padding: 0px 10px; font-weight: bold"
+
+                    new_row.appendChild(temp)
+
+                    var temp = document.createElement( "td" )
+                    temp.innerHTML = "Dia Chegada"
+                    temp.style = "padding: 0px 10px; font-weight: bold"
+
+                    new_row.appendChild(temp)
+
+                    var temp = document.createElement( "td" )
+                    temp.innerHTML = "Hora Chegada"
+                    temp.style = "padding: 0px 10px; font-weight: bold"
+
+                    new_row.appendChild(temp)
+
+                    tbl_flight_tr.appendChild( new_row )
+                    tbl_flight.appendChild(tbl_flight_tr)
+
+                    var tbl_flight_tr2 = document.createElement( "table_flight_tr2" )
+                    var table_flights_centre = document.getElementById( 'table_flights_centre' )
+                    table_flights_centre.style = "overflow-y: auto; height: 200px; width: 100%; text-align: center; margin-top: 20px"
+
+                    for( var i = 0; i < keys.length; i++ ){ // percorrer os dados guardados
+
+                        var new_row = document.createElement( "tr" )
+
+                        var temp = document.createElement( "td" )
+                        temp.innerHTML = flight_list[ keys[i] ].partida
+                        var aux = "font-weight: 20px; width: 16.27%"
+                        if(i==0)
+                            aux += "padding-top: 20px;"
+
+                        temp.style = aux
+                        new_row.appendChild(temp)
+                        
+                        var temp = document.createElement( "td" )
+                        temp.innerHTML = flight_list[ keys[i] ].destino
+                        temp.style = ""
+                        if(i==0)
+                            temp.style += "padding-top: 20px; width: 16.27%"
+                        new_row.appendChild(temp)
+
+                        var temp = document.createElement( "td" )
+                        temp.innerHTML = flight_list[ keys[i] ].partida_dia
+                        temp.style = ""
+                        if(i==0)
+                            temp.style += "padding-top: 20px; width: 16.27%"
+                        new_row.appendChild(temp)
+
+                        var temp = document.createElement( "td" )
+                        temp.innerHTML = flight_list[ keys[i] ].partida_segundos
+                        temp.style = ""
+                        if(i==0)
+                            temp.style += "padding-top: 20px; width: 16.27%"
+                        new_row.appendChild(temp)
+
+                        var temp = document.createElement( "td" )
+                        temp.innerHTML = flight_list[ keys[i] ].chegada_dia
+                        temp.style = ""
+                        if(i==0)
+                            temp.style += "padding-top: 20px; width: 16.27%"
+                        new_row.appendChild(temp)
+
+                        var temp = document.createElement( "td" )
+                        temp.innerHTML = flight_list[ keys[i] ].chegada_segundos
+                        temp.style = ""
+                        if(i==0)
+                            temp.style += "padding-top: 20px; width: 16.27%"
+                        new_row.appendChild(temp)
+
+                        var x = document.createElement("INPUT");
+                        x.setAttribute("type", "checkbox");
+                        x.setAttribute("id","check_" + keys[i])
+                        new_row.appendChild(x);
+
+                        tbl_flight_tr2.appendChild( new_row )
+                        table_flights_centre.appendChild(tbl_flight_tr2)
+                    }
+
+                    var linha = document.createElement("tr")
+                    var tbl_flight_tr3 = document.createElement( "table_flight_tr3" )
+                    var tbl_flights_new = document.getElementById( 'table_flights_new' )
+
+                    // país de partida
+                    var coluna = document.createElement("td")
+                    var input = document.createElement("input")
+                    input.setAttribute("id","pais_partida")
+                    input.style = "width: 80%"
+                    coluna.appendChild(input)
+                    linha.appendChild(coluna)
+
+                    // país de chegada
+                    var coluna = document.createElement("td")
+                    var input=document.createElement("input")
+                    input.setAttribute("id","pais_chegada")
+                    input.style = "width: 80%"
+                    coluna.appendChild(input)
+                    linha.appendChild(coluna)
+
+                    // dia de partida
+                    var coluna = document.createElement("td")
+                    var input=document.createElement("input")
+                    input.setAttribute("id","dia_partida")
+                    input.style = "width: 80%"
+                    coluna.appendChild(input)
+                    linha.appendChild(coluna)
+
+                    // hora de partida
+                    var coluna = document.createElement("td")
+                    var input=document.createElement("input")
+                    input.setAttribute("id","hora_partida")
+                    input.style = "width: 80%"
+                    coluna.appendChild(input)
+                    linha.appendChild(coluna)
+
+                    // dia de chegada
+                    var coluna = document.createElement("td")
+                    var input=document.createElement("input")
+                    input.setAttribute("id","dia_chegada")
+                    input.style = "width: 80%"
+                    coluna.appendChild(input)
+                    linha.appendChild(coluna)
+
+                    // hora de chegada
+                    var coluna = document.createElement("td")
+                    var input=document.createElement("input")
+                    input.setAttribute("id","hora_chegada")
+                    input.style = "width: 80%"
+                    coluna.appendChild(input)
+                    linha.appendChild(coluna)
+
+                    tbl_flight_tr3.appendChild( linha )
+                    tbl_flights_new.appendChild(tbl_flight_tr3)
+                    
+                    var div_botoes = document.createElement("div")
+                    div_botoes.style = "width: 100%; text-align: center;"
+
+                    var botao = document.createElement("button")
+                    botao.setAttribute("onclick","add_function()")
+                    botao.style = "margin: 5px; font-size: 13px"
+                    botao.innerText = "Add"
+                    div_botoes.appendChild(botao);
+
+                    var botao = document.createElement("button")
+                    botao.setAttribute("onclick","delete_function()")
+                    botao.style = "margin: 5px; font-size: 13px"
+                    botao.innerText = "Delete"
+                    div_botoes.appendChild(botao);
+
+                    document.body.appendChild(div_botoes)
+
+                    var img = document.createElement("img");
+                    img.src = "aviao_main2.png";
+                    img.style = "width: 70%; height: auto; opacity: 0.2; top: 2px; display: block; margin: 0 auto;"
+                    document.body.appendChild(img);
+                    
+                    var reservado = document.createElement("p")
+                    reservado.style = "width: 100%; opacity: 0.4; font-size: 12px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; position:absolute; text-align: center; bottom: 2px"
+                    reservado.innerHTML = "© 2019 Zuka's Airline. Todos os direitos reservados"
+                    document.body.appendChild(reservado);
+                },
+                error : function( err ){
+
+                    alert( "Error getting the information... Broke at getting the flights list" )
+                
+                }
+
+            })
+
+        </script>
+
+    <p id="line2"></p>
+    <script>
+        function add_function() {
+            
+            var pais_partida_input = document.getElementById("pais_partida").innerHTML
+            var pais_chegada_input = document.getElementById("pais_chegada").innerHTML
+            var dia_partida_input = document.getElementById("dia_partida").innerHTML
+            var hora_partida_input = document.getElementById("hora_partida").innerHTML
+            var dia_chegada_input = document.getElementById("dia_chegada").innerHTML
+            var hora_chegada_input = document.getElementById("hora_chegada").innerHTML
+            alert(pais_partida_input + " " + pais_chegada_input + " " + dia_partida_input + " " + hora_partida_input + " " + dia_chegada_input + " " + hora_chegada_input)
+    
+            $.ajax({
+                type : 'POST',
+                url : "http:/localhost:8081/insert_planes",
+                crossDomain : true,
+                dataType : "application/json",
+                data : {
+                    partida_dia: dia_partida_input,
+                    chegada_dia: dia_chegada_input,
+                    partida_segundos: hora_partida_input,
+                    chegada_segundos: hora_chegada_input,
+                    status: 'awaiting',
+                    price: '100',
+                    destino: pais_chegada_input,
+                    partida: pais_partida_input
+                },
+                success : function( data ){
+    
+                    var data = JSON.parse( data )
+                    console.log( data.count )
+    
+                    window.location.reload(false);  
+    
+                },
+                error : function( err ){
+                    alert( "Error getting the information... Broke at getting the flights count" )
+                }
+            }
+        )}
+    
+    </script>
+    <p></p>
+    <script>
+        function delete_function() {
+            
+            $.ajax({
+                type : 'POST',
+                url : "http:/localhost:8081/flight_list",
+                crossDomain : true,
+                dataType : "application/json",
+                data : {},
+                success : function(data){
+    
+                    var keyss = JSON.parse(data).planes
+                    var nome_quiser = Object.keys(keyss)
+                    var lista = {}
+                    for(var i=0; i<nome_quiser.length; i++){
+    
+                        if(document.getElementById("check_" + nome_quiser[i]).checked){
+    
+                            lista[nome_quiser[i]] = ""
+                        }
+                    }
+    
+                    alert(JSON.stringify(lista))
+    
+                    $.ajax({
+                                type : 'POST',
+                                url : "http:/localhost:8081/delete_planes",
+                                crossDomain : true,
+                                dataType : "application/json",
+                                data : lista,
+                                success : function(data){
+    
+                                    window.location.reload(false);  
+    
+                                },
+                                error : function( err ){
+                                    alert( "Error getting the information... Broke at getting the flights count" )
+                                }
+                            }
+                        )
+                    window.location.reload(false);  
+    
+                },
+                error : function( err ){
+                    alert( "Error getting the information... Broke at deleting flights" )
+                }
+            }
+        )
+        }
+    </script>
+    </body>
+</html>

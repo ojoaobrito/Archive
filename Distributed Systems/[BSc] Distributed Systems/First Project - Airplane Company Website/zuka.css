@@ -1,0 +1,54 @@
+body, html {
+	height: 100%;
+	margin: 0;
+}
+
+.div_principal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.botao{
+
+	width: 45%;
+	background-color: #4da6ff;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;
+}
+
+.botao:hover{
+
+	background-color: #1a8cff;
+}
+
+.box{
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+}
+  
+.bg {
+	background-image: url("aviao.jpg");
+	height: 100%;
+	opacity: 0.3;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}

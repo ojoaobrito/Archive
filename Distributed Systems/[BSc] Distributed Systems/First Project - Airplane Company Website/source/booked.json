@@ -1,0 +1,52 @@
+{
+    "1" : {
+        "partida_dia" : "11",
+        "chegada_dia" : "12",
+        "partida_segundos" : "1000",
+        "chegada_segundos" : "1000",
+        "status" : "awaiting",
+        "price" : "100",
+        "destino" : "Portugal",
+        "partida" : "Italia"
+    },
+    "2" : {
+        "partida_dia" : "11",
+        "chegada_dia" : "12",
+        "partida_segundos" : "1000",
+        "chegada_segundos" : "1000",
+        "status" : "awaiting",
+        "price" : "100",
+        "destino" : "Portugal",
+        "partida" : "Italia"
+    },
+    "3" : {
+        "partida_dia" : "11",
+        "chegada_dia" : "12",
+        "partida_segundos" : "1000",
+        "chegada_segundos" : "1000",
+        "status" : "awaiting",
+        "price" : "100",
+        "destino" : "Portugal",
+        "partida" : "Italia"
+    },
+    "4" : {
+        "partida_dia" : "11",
+        "chegada_dia" : "12",
+        "partida_segundos" : "1000",
+        "chegada_segundos" : "1000",
+        "status" : "awaiting",
+        "price" : "100",
+        "destino" : "Portugal",
+        "partida" : "Italia"
+    },
+    "5" : {
+        "partida_dia" : "11",
+        "chegada_dia" : "12",
+        "partida_segundos" : "1000",
+        "chegada_segundos" : "1000",
+        "status" : "awaiting",
+        "price" : "100",
+        "destino" : "Portugal",
+        "partida" : "Italia"
+    }
+}

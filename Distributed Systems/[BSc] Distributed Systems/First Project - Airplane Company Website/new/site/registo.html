@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Zuka's Airline</title>
+        <link rel="stylesheet" type="text/css" href="zuka.css">
+    </head>
+    <body>
+        <div class="bg"></div>
+        <div align="center" class="div_principal">
+            <h2 style="font-size: 40px; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #4d79ff">Zuka's Airline</h2>
+            <form>
+                <input type="text" name="username" id="user" value="" placeholder="username" class="box">
+                <br>
+                <input type="password" name="password" id="pass" value="" placeholder="password" class="box">
+                <br>
+                <input type="password" name="password_conf" id="pass_conf" value="" placeholder="confimar password" class="box">
+            </form>
+            <button onclick="registar()" class="botao">Registar</button>
+            <p id="demo"></p>
+        </div>
+        <p align="center" style="opacity: 0.4; bottom: 2px; position: absolute; font-size: 12px; width: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">© 2019 Zuka's Airline. Todos os direitos reservados</p>
+
+        <script>
+            function registar(){
+
+                var user = document.getElementById("user").value;
+                var pass = document.getElementById("pass").value;
+                var pass_conf = document.getElementById("pass_conf").value;
+
+                if(user==="" || pass==="" || pass_conf===""){
+
+                    if(user==="")
+                        document.getElementById("user").style.border = "1px solid red"
+                    
+                    if(pass==="")
+                        document.getElementById("pass").style.border = "1px solid red"
+                    
+                    if(pass_conf==="")
+                        document.getElementById("pass_conf").style.border = "1px solid red"
+
+                    if(pass!="" && pass_conf!="" && pass!=pass_conf){
+
+                        document.getElementById("pass").style.border = "1px solid red"
+                        document.getElementById("pass_conf").style.border = "1px solid red"
+                    }
+
+                    setTimeout(function(){alert("Dados inválidos!");},100); // pequeno delay antes de mostrar o aviso
+                }
+
+                else if(pass!="" && pass_conf!="" && pass!=pass_conf){
+
+                    document.getElementById("pass").style.border = "1px solid red"
+                    document.getElementById("pass_conf").style.border = "1px solid red"
+                    setTimeout(function(){alert("Passwords diferentes!");},100); // pequeno delay antes de mostrar o aviso
+                }
+
+                else{
+                    
+                    window.open("index.html","_self")
+                }
+            }
+        </script>
+    </body>
+</html>

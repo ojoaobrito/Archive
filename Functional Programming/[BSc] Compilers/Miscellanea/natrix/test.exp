@@ -1,0 +1,15 @@
+// ficheiro de teste para a linguagem Natrix
+
+var num : int = 5;
+var fatorial : int = 1;
+var i : int = 0;
+
+num := 20 / 5 + 5;
+
+if num>9 then {num:=20;} else {pass;}
+
+while num<15 do {num := num+1;}
+
+foreach i in 1..num do {fatorial := fatorial * i;}
+
+print fatorial;

@@ -1,0 +1,702 @@
+State 0:
+prog' -> . prog [ # ]
+-- On WHILE shift to state 1
+-- On VAR shift to state 33
+-- On PRINT shift to state 40
+-- On PASS shift to state 43
+-- On IF shift to state 45
+-- On IDENT shift to state 49
+-- On FOREACH shift to state 53
+-- On prog shift to state 73
+-- On list(inst) shift to state 74
+-- On inst shift to state 63
+-- On EOF reduce production list(inst) -> 
+
+State 1:
+inst -> WHILE . test DO LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On TRUE shift to state 2
+-- On NEG shift to state 3
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On FALSE shift to state 17
+-- On test shift to state 30
+-- On expr shift to state 19
+
+State 2:
+test -> TRUE . [ THEN DO ]
+-- On THEN reduce production test -> TRUE 
+-- On DO reduce production test -> TRUE 
+
+State 3:
+test -> NEG . test [ THEN DO ]
+-- On TRUE shift to state 2
+-- On NEG shift to state 3
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On FALSE shift to state 17
+-- On test shift to state 18
+-- On expr shift to state 19
+
+State 4:
+expr -> LP . expr RP [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 7
+
+State 5:
+expr -> INT . [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On TIMES reduce production expr -> INT 
+-- On THEN reduce production expr -> INT 
+-- On SMALLEQUAL reduce production expr -> INT 
+-- On SMALL reduce production expr -> INT 
+-- On SEQ reduce production expr -> INT 
+-- On RP reduce production expr -> INT 
+-- On PLUS reduce production expr -> INT 
+-- On MINUS reduce production expr -> INT 
+-- On DOT_DOT reduce production expr -> INT 
+-- On DO reduce production expr -> INT 
+-- On DIV reduce production expr -> INT 
+-- On COMP reduce production expr -> INT 
+-- On BIGEQUAL reduce production expr -> INT 
+-- On BIG reduce production expr -> INT 
+
+State 6:
+expr -> IDENT . [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On TIMES reduce production expr -> IDENT 
+-- On THEN reduce production expr -> IDENT 
+-- On SMALLEQUAL reduce production expr -> IDENT 
+-- On SMALL reduce production expr -> IDENT 
+-- On SEQ reduce production expr -> IDENT 
+-- On RP reduce production expr -> IDENT 
+-- On PLUS reduce production expr -> IDENT 
+-- On MINUS reduce production expr -> IDENT 
+-- On DOT_DOT reduce production expr -> IDENT 
+-- On DO reduce production expr -> IDENT 
+-- On DIV reduce production expr -> IDENT 
+-- On COMP reduce production expr -> IDENT 
+-- On BIGEQUAL reduce production expr -> IDENT 
+-- On BIG reduce production expr -> IDENT 
+
+State 7:
+expr -> expr . PLUS expr [ TIMES RP PLUS MINUS DIV ]
+expr -> expr . MINUS expr [ TIMES RP PLUS MINUS DIV ]
+expr -> expr . TIMES expr [ TIMES RP PLUS MINUS DIV ]
+expr -> expr . DIV expr [ TIMES RP PLUS MINUS DIV ]
+expr -> LP expr . RP [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On TIMES shift to state 8
+-- On RP shift to state 10
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DIV shift to state 13
+
+State 8:
+expr -> expr TIMES . expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 9
+
+State 9:
+expr -> expr . PLUS expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . MINUS expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . TIMES expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr TIMES expr . [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . DIV expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On TIMES reduce production expr -> expr TIMES expr 
+-- On THEN reduce production expr -> expr TIMES expr 
+-- On SMALLEQUAL reduce production expr -> expr TIMES expr 
+-- On SMALL reduce production expr -> expr TIMES expr 
+-- On SEQ reduce production expr -> expr TIMES expr 
+-- On RP reduce production expr -> expr TIMES expr 
+-- On PLUS reduce production expr -> expr TIMES expr 
+-- On MINUS reduce production expr -> expr TIMES expr 
+-- On DOT_DOT reduce production expr -> expr TIMES expr 
+-- On DO reduce production expr -> expr TIMES expr 
+-- On DIV reduce production expr -> expr TIMES expr 
+-- On COMP reduce production expr -> expr TIMES expr 
+-- On BIGEQUAL reduce production expr -> expr TIMES expr 
+-- On BIG reduce production expr -> expr TIMES expr 
+
+State 10:
+expr -> LP expr RP . [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On TIMES reduce production expr -> LP expr RP 
+-- On THEN reduce production expr -> LP expr RP 
+-- On SMALLEQUAL reduce production expr -> LP expr RP 
+-- On SMALL reduce production expr -> LP expr RP 
+-- On SEQ reduce production expr -> LP expr RP 
+-- On RP reduce production expr -> LP expr RP 
+-- On PLUS reduce production expr -> LP expr RP 
+-- On MINUS reduce production expr -> LP expr RP 
+-- On DOT_DOT reduce production expr -> LP expr RP 
+-- On DO reduce production expr -> LP expr RP 
+-- On DIV reduce production expr -> LP expr RP 
+-- On COMP reduce production expr -> LP expr RP 
+-- On BIGEQUAL reduce production expr -> LP expr RP 
+-- On BIG reduce production expr -> LP expr RP 
+
+State 11:
+expr -> expr PLUS . expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 12
+
+State 12:
+expr -> expr . PLUS expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr PLUS expr . [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . MINUS expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . TIMES expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . DIV expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On TIMES shift to state 8
+-- On DIV shift to state 13
+-- On THEN reduce production expr -> expr PLUS expr 
+-- On SMALLEQUAL reduce production expr -> expr PLUS expr 
+-- On SMALL reduce production expr -> expr PLUS expr 
+-- On SEQ reduce production expr -> expr PLUS expr 
+-- On RP reduce production expr -> expr PLUS expr 
+-- On PLUS reduce production expr -> expr PLUS expr 
+-- On MINUS reduce production expr -> expr PLUS expr 
+-- On DOT_DOT reduce production expr -> expr PLUS expr 
+-- On DO reduce production expr -> expr PLUS expr 
+-- On COMP reduce production expr -> expr PLUS expr 
+-- On BIGEQUAL reduce production expr -> expr PLUS expr 
+-- On BIG reduce production expr -> expr PLUS expr 
+
+State 13:
+expr -> expr DIV . expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 14
+
+State 14:
+expr -> expr . PLUS expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . MINUS expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . TIMES expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . DIV expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr DIV expr . [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On TIMES reduce production expr -> expr DIV expr 
+-- On THEN reduce production expr -> expr DIV expr 
+-- On SMALLEQUAL reduce production expr -> expr DIV expr 
+-- On SMALL reduce production expr -> expr DIV expr 
+-- On SEQ reduce production expr -> expr DIV expr 
+-- On RP reduce production expr -> expr DIV expr 
+-- On PLUS reduce production expr -> expr DIV expr 
+-- On MINUS reduce production expr -> expr DIV expr 
+-- On DOT_DOT reduce production expr -> expr DIV expr 
+-- On DO reduce production expr -> expr DIV expr 
+-- On DIV reduce production expr -> expr DIV expr 
+-- On COMP reduce production expr -> expr DIV expr 
+-- On BIGEQUAL reduce production expr -> expr DIV expr 
+-- On BIG reduce production expr -> expr DIV expr 
+
+State 15:
+expr -> expr MINUS . expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 16
+
+State 16:
+expr -> expr . PLUS expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . MINUS expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr MINUS expr . [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . TIMES expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+expr -> expr . DIV expr [ TIMES THEN SMALLEQUAL SMALL SEQ RP PLUS MINUS DOT_DOT DO DIV COMP BIGEQUAL BIG ]
+-- On TIMES shift to state 8
+-- On DIV shift to state 13
+-- On THEN reduce production expr -> expr MINUS expr 
+-- On SMALLEQUAL reduce production expr -> expr MINUS expr 
+-- On SMALL reduce production expr -> expr MINUS expr 
+-- On SEQ reduce production expr -> expr MINUS expr 
+-- On RP reduce production expr -> expr MINUS expr 
+-- On PLUS reduce production expr -> expr MINUS expr 
+-- On MINUS reduce production expr -> expr MINUS expr 
+-- On DOT_DOT reduce production expr -> expr MINUS expr 
+-- On DO reduce production expr -> expr MINUS expr 
+-- On COMP reduce production expr -> expr MINUS expr 
+-- On BIGEQUAL reduce production expr -> expr MINUS expr 
+-- On BIG reduce production expr -> expr MINUS expr 
+
+State 17:
+test -> FALSE . [ THEN DO ]
+-- On THEN reduce production test -> FALSE 
+-- On DO reduce production test -> FALSE 
+
+State 18:
+test -> NEG test . [ THEN DO ]
+-- On THEN reduce production test -> NEG test 
+-- On DO reduce production test -> NEG test 
+
+State 19:
+expr -> expr . PLUS expr [ TIMES SMALLEQUAL SMALL PLUS MINUS DIV COMP BIGEQUAL BIG ]
+expr -> expr . MINUS expr [ TIMES SMALLEQUAL SMALL PLUS MINUS DIV COMP BIGEQUAL BIG ]
+expr -> expr . TIMES expr [ TIMES SMALLEQUAL SMALL PLUS MINUS DIV COMP BIGEQUAL BIG ]
+expr -> expr . DIV expr [ TIMES SMALLEQUAL SMALL PLUS MINUS DIV COMP BIGEQUAL BIG ]
+test -> expr . COMP expr [ THEN DO ]
+test -> expr . BIG expr [ THEN DO ]
+test -> expr . BIGEQUAL expr [ THEN DO ]
+test -> expr . SMALL expr [ THEN DO ]
+test -> expr . SMALLEQUAL expr [ THEN DO ]
+-- On TIMES shift to state 8
+-- On SMALLEQUAL shift to state 20
+-- On SMALL shift to state 22
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DIV shift to state 13
+-- On COMP shift to state 24
+-- On BIGEQUAL shift to state 26
+-- On BIG shift to state 28
+
+State 20:
+test -> expr SMALLEQUAL . expr [ THEN DO ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 21
+
+State 21:
+expr -> expr . PLUS expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . MINUS expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . TIMES expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . DIV expr [ TIMES THEN PLUS MINUS DO DIV ]
+test -> expr SMALLEQUAL expr . [ THEN DO ]
+-- On TIMES shift to state 8
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DIV shift to state 13
+-- On THEN reduce production test -> expr SMALLEQUAL expr 
+-- On DO reduce production test -> expr SMALLEQUAL expr 
+
+State 22:
+test -> expr SMALL . expr [ THEN DO ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 23
+
+State 23:
+expr -> expr . PLUS expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . MINUS expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . TIMES expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . DIV expr [ TIMES THEN PLUS MINUS DO DIV ]
+test -> expr SMALL expr . [ THEN DO ]
+-- On TIMES shift to state 8
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DIV shift to state 13
+-- On THEN reduce production test -> expr SMALL expr 
+-- On DO reduce production test -> expr SMALL expr 
+
+State 24:
+test -> expr COMP . expr [ THEN DO ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 25
+
+State 25:
+expr -> expr . PLUS expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . MINUS expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . TIMES expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . DIV expr [ TIMES THEN PLUS MINUS DO DIV ]
+test -> expr COMP expr . [ THEN DO ]
+-- On TIMES shift to state 8
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DIV shift to state 13
+-- On THEN reduce production test -> expr COMP expr 
+-- On DO reduce production test -> expr COMP expr 
+
+State 26:
+test -> expr BIGEQUAL . expr [ THEN DO ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 27
+
+State 27:
+expr -> expr . PLUS expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . MINUS expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . TIMES expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . DIV expr [ TIMES THEN PLUS MINUS DO DIV ]
+test -> expr BIGEQUAL expr . [ THEN DO ]
+-- On TIMES shift to state 8
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DIV shift to state 13
+-- On THEN reduce production test -> expr BIGEQUAL expr 
+-- On DO reduce production test -> expr BIGEQUAL expr 
+
+State 28:
+test -> expr BIG . expr [ THEN DO ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 29
+
+State 29:
+expr -> expr . PLUS expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . MINUS expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . TIMES expr [ TIMES THEN PLUS MINUS DO DIV ]
+expr -> expr . DIV expr [ TIMES THEN PLUS MINUS DO DIV ]
+test -> expr BIG expr . [ THEN DO ]
+-- On TIMES shift to state 8
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DIV shift to state 13
+-- On THEN reduce production test -> expr BIG expr 
+-- On DO reduce production test -> expr BIG expr 
+
+State 30:
+inst -> WHILE test . DO LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On DO shift to state 31
+
+State 31:
+inst -> WHILE test DO . LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On LB shift to state 32
+
+State 32:
+inst -> WHILE test DO LB . list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE shift to state 1
+-- On VAR shift to state 33
+-- On PRINT shift to state 40
+-- On PASS shift to state 43
+-- On IF shift to state 45
+-- On IDENT shift to state 49
+-- On FOREACH shift to state 53
+-- On list(inst) shift to state 71
+-- On inst shift to state 63
+-- On RB reduce production list(inst) -> 
+
+State 33:
+inst -> VAR . IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On IDENT shift to state 34
+
+State 34:
+inst -> VAR IDENT . DOUBLE_DOT INT_KEYWORD EQ expr SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On DOUBLE_DOT shift to state 35
+
+State 35:
+inst -> VAR IDENT DOUBLE_DOT . INT_KEYWORD EQ expr SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On INT_KEYWORD shift to state 36
+
+State 36:
+inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD . EQ expr SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On EQ shift to state 37
+
+State 37:
+inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ . expr SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 38
+
+State 38:
+expr -> expr . PLUS expr [ TIMES SEQ PLUS MINUS DIV ]
+expr -> expr . MINUS expr [ TIMES SEQ PLUS MINUS DIV ]
+expr -> expr . TIMES expr [ TIMES SEQ PLUS MINUS DIV ]
+expr -> expr . DIV expr [ TIMES SEQ PLUS MINUS DIV ]
+inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr . SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On TIMES shift to state 8
+-- On SEQ shift to state 39
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DIV shift to state 13
+
+State 39:
+inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ . [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE reduce production inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ 
+-- On VAR reduce production inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ 
+-- On RB reduce production inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ 
+-- On PRINT reduce production inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ 
+-- On PASS reduce production inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ 
+-- On IF reduce production inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ 
+-- On IDENT reduce production inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ 
+-- On FOREACH reduce production inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ 
+-- On EOF reduce production inst -> VAR IDENT DOUBLE_DOT INT_KEYWORD EQ expr SEQ 
+
+State 40:
+inst -> PRINT . expr SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 41
+
+State 41:
+expr -> expr . PLUS expr [ TIMES SEQ PLUS MINUS DIV ]
+expr -> expr . MINUS expr [ TIMES SEQ PLUS MINUS DIV ]
+expr -> expr . TIMES expr [ TIMES SEQ PLUS MINUS DIV ]
+expr -> expr . DIV expr [ TIMES SEQ PLUS MINUS DIV ]
+inst -> PRINT expr . SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On TIMES shift to state 8
+-- On SEQ shift to state 42
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DIV shift to state 13
+
+State 42:
+inst -> PRINT expr SEQ . [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE reduce production inst -> PRINT expr SEQ 
+-- On VAR reduce production inst -> PRINT expr SEQ 
+-- On RB reduce production inst -> PRINT expr SEQ 
+-- On PRINT reduce production inst -> PRINT expr SEQ 
+-- On PASS reduce production inst -> PRINT expr SEQ 
+-- On IF reduce production inst -> PRINT expr SEQ 
+-- On IDENT reduce production inst -> PRINT expr SEQ 
+-- On FOREACH reduce production inst -> PRINT expr SEQ 
+-- On EOF reduce production inst -> PRINT expr SEQ 
+
+State 43:
+inst -> PASS . SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On SEQ shift to state 44
+
+State 44:
+inst -> PASS SEQ . [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE reduce production inst -> PASS SEQ 
+-- On VAR reduce production inst -> PASS SEQ 
+-- On RB reduce production inst -> PASS SEQ 
+-- On PRINT reduce production inst -> PASS SEQ 
+-- On PASS reduce production inst -> PASS SEQ 
+-- On IF reduce production inst -> PASS SEQ 
+-- On IDENT reduce production inst -> PASS SEQ 
+-- On FOREACH reduce production inst -> PASS SEQ 
+-- On EOF reduce production inst -> PASS SEQ 
+
+State 45:
+inst -> IF . test THEN LB list(inst) RB ELSE LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On TRUE shift to state 2
+-- On NEG shift to state 3
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On FALSE shift to state 17
+-- On test shift to state 46
+-- On expr shift to state 19
+
+State 46:
+inst -> IF test . THEN LB list(inst) RB ELSE LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On THEN shift to state 47
+
+State 47:
+inst -> IF test THEN . LB list(inst) RB ELSE LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On LB shift to state 48
+
+State 48:
+inst -> IF test THEN LB . list(inst) RB ELSE LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE shift to state 1
+-- On VAR shift to state 33
+-- On PRINT shift to state 40
+-- On PASS shift to state 43
+-- On IF shift to state 45
+-- On IDENT shift to state 49
+-- On FOREACH shift to state 53
+-- On list(inst) shift to state 65
+-- On inst shift to state 63
+-- On RB reduce production list(inst) -> 
+
+State 49:
+inst -> IDENT . VAR_DEF expr SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On VAR_DEF shift to state 50
+
+State 50:
+inst -> IDENT VAR_DEF . expr SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 51
+
+State 51:
+expr -> expr . PLUS expr [ TIMES SEQ PLUS MINUS DIV ]
+expr -> expr . MINUS expr [ TIMES SEQ PLUS MINUS DIV ]
+expr -> expr . TIMES expr [ TIMES SEQ PLUS MINUS DIV ]
+expr -> expr . DIV expr [ TIMES SEQ PLUS MINUS DIV ]
+inst -> IDENT VAR_DEF expr . SEQ [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On TIMES shift to state 8
+-- On SEQ shift to state 52
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DIV shift to state 13
+
+State 52:
+inst -> IDENT VAR_DEF expr SEQ . [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE reduce production inst -> IDENT VAR_DEF expr SEQ 
+-- On VAR reduce production inst -> IDENT VAR_DEF expr SEQ 
+-- On RB reduce production inst -> IDENT VAR_DEF expr SEQ 
+-- On PRINT reduce production inst -> IDENT VAR_DEF expr SEQ 
+-- On PASS reduce production inst -> IDENT VAR_DEF expr SEQ 
+-- On IF reduce production inst -> IDENT VAR_DEF expr SEQ 
+-- On IDENT reduce production inst -> IDENT VAR_DEF expr SEQ 
+-- On FOREACH reduce production inst -> IDENT VAR_DEF expr SEQ 
+-- On EOF reduce production inst -> IDENT VAR_DEF expr SEQ 
+
+State 53:
+inst -> FOREACH . IDENT IN expr DOT_DOT expr DO LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On IDENT shift to state 54
+
+State 54:
+inst -> FOREACH IDENT . IN expr DOT_DOT expr DO LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On IN shift to state 55
+
+State 55:
+inst -> FOREACH IDENT IN . expr DOT_DOT expr DO LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 56
+
+State 56:
+expr -> expr . PLUS expr [ TIMES PLUS MINUS DOT_DOT DIV ]
+expr -> expr . MINUS expr [ TIMES PLUS MINUS DOT_DOT DIV ]
+expr -> expr . TIMES expr [ TIMES PLUS MINUS DOT_DOT DIV ]
+expr -> expr . DIV expr [ TIMES PLUS MINUS DOT_DOT DIV ]
+inst -> FOREACH IDENT IN expr . DOT_DOT expr DO LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On TIMES shift to state 8
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DOT_DOT shift to state 57
+-- On DIV shift to state 13
+
+State 57:
+inst -> FOREACH IDENT IN expr DOT_DOT . expr DO LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On LP shift to state 4
+-- On INT shift to state 5
+-- On IDENT shift to state 6
+-- On expr shift to state 58
+
+State 58:
+expr -> expr . PLUS expr [ TIMES PLUS MINUS DO DIV ]
+expr -> expr . MINUS expr [ TIMES PLUS MINUS DO DIV ]
+expr -> expr . TIMES expr [ TIMES PLUS MINUS DO DIV ]
+expr -> expr . DIV expr [ TIMES PLUS MINUS DO DIV ]
+inst -> FOREACH IDENT IN expr DOT_DOT expr . DO LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On TIMES shift to state 8
+-- On PLUS shift to state 11
+-- On MINUS shift to state 15
+-- On DO shift to state 59
+-- On DIV shift to state 13
+
+State 59:
+inst -> FOREACH IDENT IN expr DOT_DOT expr DO . LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On LB shift to state 60
+
+State 60:
+inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB . list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE shift to state 1
+-- On VAR shift to state 33
+-- On PRINT shift to state 40
+-- On PASS shift to state 43
+-- On IF shift to state 45
+-- On IDENT shift to state 49
+-- On FOREACH shift to state 53
+-- On list(inst) shift to state 61
+-- On inst shift to state 63
+-- On RB reduce production list(inst) -> 
+
+State 61:
+inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) . RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On RB shift to state 62
+
+State 62:
+inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) RB . [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE reduce production inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) RB 
+-- On VAR reduce production inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) RB 
+-- On RB reduce production inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) RB 
+-- On PRINT reduce production inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) RB 
+-- On PASS reduce production inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) RB 
+-- On IF reduce production inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) RB 
+-- On IDENT reduce production inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) RB 
+-- On FOREACH reduce production inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) RB 
+-- On EOF reduce production inst -> FOREACH IDENT IN expr DOT_DOT expr DO LB list(inst) RB 
+
+State 63:
+list(inst) -> inst . list(inst) [ RB EOF ]
+-- On WHILE shift to state 1
+-- On VAR shift to state 33
+-- On PRINT shift to state 40
+-- On PASS shift to state 43
+-- On IF shift to state 45
+-- On IDENT shift to state 49
+-- On FOREACH shift to state 53
+-- On list(inst) shift to state 64
+-- On inst shift to state 63
+-- On RB reduce production list(inst) -> 
+-- On EOF reduce production list(inst) -> 
+
+State 64:
+list(inst) -> inst list(inst) . [ RB EOF ]
+-- On RB reduce production list(inst) -> inst list(inst) 
+-- On EOF reduce production list(inst) -> inst list(inst) 
+
+State 65:
+inst -> IF test THEN LB list(inst) . RB ELSE LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On RB shift to state 66
+
+State 66:
+inst -> IF test THEN LB list(inst) RB . ELSE LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On ELSE shift to state 67
+
+State 67:
+inst -> IF test THEN LB list(inst) RB ELSE . LB list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On LB shift to state 68
+
+State 68:
+inst -> IF test THEN LB list(inst) RB ELSE LB . list(inst) RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE shift to state 1
+-- On VAR shift to state 33
+-- On PRINT shift to state 40
+-- On PASS shift to state 43
+-- On IF shift to state 45
+-- On IDENT shift to state 49
+-- On FOREACH shift to state 53
+-- On list(inst) shift to state 69
+-- On inst shift to state 63
+-- On RB reduce production list(inst) -> 
+
+State 69:
+inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) . RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On RB shift to state 70
+
+State 70:
+inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) RB . [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE reduce production inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) RB 
+-- On VAR reduce production inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) RB 
+-- On RB reduce production inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) RB 
+-- On PRINT reduce production inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) RB 
+-- On PASS reduce production inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) RB 
+-- On IF reduce production inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) RB 
+-- On IDENT reduce production inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) RB 
+-- On FOREACH reduce production inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) RB 
+-- On EOF reduce production inst -> IF test THEN LB list(inst) RB ELSE LB list(inst) RB 
+
+State 71:
+inst -> WHILE test DO LB list(inst) . RB [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On RB shift to state 72
+
+State 72:
+inst -> WHILE test DO LB list(inst) RB . [ WHILE VAR RB PRINT PASS IF IDENT FOREACH EOF ]
+-- On WHILE reduce production inst -> WHILE test DO LB list(inst) RB 
+-- On VAR reduce production inst -> WHILE test DO LB list(inst) RB 
+-- On RB reduce production inst -> WHILE test DO LB list(inst) RB 
+-- On PRINT reduce production inst -> WHILE test DO LB list(inst) RB 
+-- On PASS reduce production inst -> WHILE test DO LB list(inst) RB 
+-- On IF reduce production inst -> WHILE test DO LB list(inst) RB 
+-- On IDENT reduce production inst -> WHILE test DO LB list(inst) RB 
+-- On FOREACH reduce production inst -> WHILE test DO LB list(inst) RB 
+-- On EOF reduce production inst -> WHILE test DO LB list(inst) RB 
+
+State 73:
+prog' -> prog . [ # ]
+-- On # accept prog
+
+State 74:
+prog -> list(inst) . EOF [ # ]
+-- On EOF shift to state 75
+
+State 75:
+prog -> list(inst) EOF . [ # ]
+-- On # reduce production prog -> list(inst) EOF 
+

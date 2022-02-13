@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<automoveis>
+    <automovel Modelo="C220">
+        <tipo>Ligeiro</tipo>
+        <marca>Mercedes</marca>
+        <carateristicas>
+            <combustivel>Diesel</combustivel>
+            <cor>Cinzento</cor>
+            <potencia>170</potencia> <!-- cavalos -->
+            <anos>7</anos>
+            <quilometros>180050</quilometros>
+            <jantes>17</jantes> <!-- polegadas -->
+            <extras>
+                <ar_condicionado>Sim</ar_condicionado>
+                <gps>Sim</gps>
+                <estofos>Pele</estofos>
+            </extras>
+        </carateristicas>
+    </automovel>
+</automoveis>

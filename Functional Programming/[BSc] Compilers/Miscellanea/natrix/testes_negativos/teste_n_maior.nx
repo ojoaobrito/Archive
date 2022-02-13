@@ -1,0 +1,15 @@
+// teste negativo de procura do maior número
+
+type arr = array 5 of int ;
+var lista : arr filled by 0 ;
+var maior : int = 0;
+
+a[0] := 6 ;
+a[1] := 2 ;
+a[2] := 4 ;
+a[3] := 10 ;
+a[4] := 9 ;
+
+foreach i in 1..5 do { if (a[i]>maior) then { maior := a[i] ; }  }
+
+print(maior)

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title> Airplanes </title>
+    </head>
+    <body>
+        
+        <p id="line"></p>
+        <p id="debbug"></p>
+        
+
+
+        <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+        <script type = "text/javascript">
+
+            $( '#line' ).css({
+                textAlign : 'center',
+                border : '1px solid'
+            }).text( "Airplanes" )
+
+            $.ajax({
+                type : 'POST',
+                url : "http:/localhost:8081/count_booked",
+                crossDomain : true,
+                dataType : "application/json",
+                data : {},
+                success : function( data ){
+
+                    var data = JSON.parse( data )
+                    console.log( "oioiioiio \n\n\n " + data.count )
+
+                    $( '#line' ).css({
+                        textAlign : 'center',
+                        fontSize : "40px"
+                    }).text( "In this moment exists " + data.count + " booked flights" )
+
+                },
+                error : function( err ){
+                    alert( "Error getting the information... Broke at getting the flights count" )
+                }
+            })
+
+        </script>
+
+        <div id="table_flights"></div>
+
+        <script>
+                
+            function get_string_hora( segundos ){
+                
+                var segundos_int = parseInt( segundos )
+                var horas = 0
+                var segundos = 0
+
+                while( segundos_int > 60 ){
+                    segundos_int -= 60
+                    horas += 1
+                }
+
+                segundos = segundos_int
+
+                return horas.toString() + ":" + segundos.toString()
+
+            }
+
+            $.ajax({
+
+                type : "POST",
+                url : "http:/localhost:8081/flight_list",
+                crossDomain : true,
+                dataType : "application/json",
+                data : {},
+                success : function( data ){
+                    
+                    console.log( data )
+                    var planes_list= JSON.parse( data )
+                    var flight_list = planes_list.planes
+
+                    var tbl_flight = document.getElementById( 'table_flights' )
+                    var tbl_flight_tr = document.createElement( "table_flight_tr" )
+                    var keys = Object.keys( flight_list )
+
+                    var new_row = document.createElement( "tr" )
+                        
+                    new_row.appendChild(
+                        document.createElement( "td" ).appendChild(
+                            document.createTextNode( 
+                                "País Partida"
+                    )))
+
+                    new_row.appendChild(
+                        document.createElement( "td" ).appendChild(
+                            document.createTextNode( 
+                                "País Chegada"
+                    )))
+
+                    new_row.appendChild(
+                        document.createElement( "td" ).appendChild(
+                            document.createTextNode( 
+                                "Dia Partida"
+                    )))
+
+                    new_row.appendChild(
+                        document.createElement( "td" ).appendChild(
+                            document.createTextNode(
+                                "Hora Partida"
+                    )))
+                
+                    new_row.appendChild(
+                        document.createElement( "td" ).appendChild(
+                            document.createTextNode( 
+                                "Dia Chegada"
+                    )))
+
+                    new_row.appendChild(
+                        document.createElement( "td" ).appendChild(
+                            document.createTextNode(
+                                "Hora Chegada"
+                    )))
+
+                    tbl_flight_tr.appendChild( new_row )
+                    
+
+                    for( var i = 0; i < keys.length; i++ ){
+
+                        var new_row = document.createElement( "tr" )
+                        
+                        new_row.appendChild(
+                            document.createElement( "td" ).appendChild(
+                                document.createTextNode( 
+                                    flight_list[ keys[i] ].partida
+                        )))
+
+                        new_row.appendChild(
+                            document.createElement( "td" ).appendChild(
+                                document.createTextNode( 
+                                    flight_list[ keys[i] ].destino
+                        )))
+
+                        new_row.appendChild(
+                            document.createElement( "td" ).appendChild(
+                                document.createTextNode( 
+                                    flight_list[ keys[i] ].partida_dia
+                        )))
+
+                        new_row.appendChild(
+                            document.createElement( "td" ).appendChild(
+                                document.createTextNode( 
+                                    get_string_hora( 
+                                        flight_list[ keys[i] ].partida_segundos
+                        ))))
+                
+                        new_row.appendChild(
+                            document.createElement( "td" ).appendChild(
+                                document.createTextNode( 
+                                    flight_list[ keys[i] ].chegada_dia
+                        )))
+
+                        new_row.appendChild(
+                            document.createElement( "td" ).appendChild(
+                                document.createTextNode( 
+                                    get_string_hora( 
+                                        flight_list[ keys[i] ].chegada_segundos
+                        ))))
+
+                        tbl_flight_tr.appendChild( new_row )
+                    }
+
+                    tbl_flight.appendChild( tbl_flight_tr )
+
+                },
+                error : function( err ){
+
+                    alert( "Error getting the information... Broke at getting the flights list" )
+                
+                }
+
+            })
+
+        </script>
+        <p id="line2"></p>
+        <script>
+            function myFunction() {
+                $( '#line2' ).css({
+                    textAlign : 'center',
+                    border : '1px solid'
+                }).text( "Airplanes" )
+
+                $.ajax({
+                    type : 'POST',
+                    url : "http:/localhost:8081/insert_planes",
+                    crossDomain : true,
+                    dataType : "application/json",
+                    data : {
+                        partida_dia: '11',
+                        chegada_dia: '12',
+                        partida_segundos: '1000',
+                        chegada_segundos: '1000',
+                        status: 'awaiting',
+                        price: '100',
+                        destino: 'portugal',
+                        partida: 'italia'
+                    },
+                    success : function( data ){
+
+                        var data = JSON.parse( data )
+                        console.log( data.count )
+
+                        $( '#line2' ).css({
+                            textAlign : 'center',
+                            fontSize : "40px"
+                        }).text( "In this moment exists " + data.count + " booked flights" )
+
+                    },
+                    error : function( err ){
+                        alert( "Error getting the information... Broke at getting the flights count" )
+                    }
+                }
+            )}
+
+        </script>
+        <button onclick="myFunction()">Click me</button> 
+        
+
+
+
+
+    </body>
+</html>
