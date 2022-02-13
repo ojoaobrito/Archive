@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+   font-family: Trebuchet MS,Helvica,sans-serif; 
+   background-color: #e6f0ff;
+}
+
+.referencia {
+   text-decoration: none;
+   color: white;
+}
+
+.referencia2 {
+   text-decoration: none;
+   color: black;
+}
+
+#info {
+   background-color: #bfbfbf;
+   text-align: center;
+   margin-right: -10px;
+   padding: 7px;
+   box-shadow: 2px 2px #888888;
+   margin-top: 10px;
+}
+
+.texto {
+   color: #404040;
+}
+
+.rodapé {
+   position: absolute;
+   margin-bottom: 2px;
+   background-color: #bfbfbf;
+   color: #001f4d;
+   text-align: center;
+   font-size: 15px;
+   position: absolute;
+   box-shadow: 2px 2px #888888;
+   width: 98.5%;
+   padding-top: 7px;
+   padding-bottom: 7px;
+}
+
+.imagem {
+   width: 255px;
+   padding-top: 3px;
+   margin-top: -42px;
+   margin-left: -40px;
+   position: relative;   
+}
+
+.seta {
+   width: 15px;
+}
+
+.disponiveis {
+   font-size: 14px;
+}
+
+.presidente {
+   height: 200px;
+   width: 250px;
+   box-shadow: 2px 2px #888888;
+}
+
+.nome {
+   font-style: italic;
+   margin-top: -13px;
+   margin-left: 60px;
+}
+
+.padding {
+   left: 30%; 
+}
+
+.grandalhão {
+   width: 480px;
+   height: 450px;
+}
+
+#menu1 ul ul {
+   display: none;
+   position: absolute;
+   background-color: #80b3ff;
+   padding: 5px;
+   border: 2px solid #001f4d;
+   border-top: 0px;
+   margin-left: -40px;
+   margin-top: 50px;
+   float: left;
+   position: absolute;
+}
+
+#menu1 ul ul li {
+   color: black;
+   background-color: #80b3ff; 
+   font-size: 15px;
+   box-shadow: none;
+   padding-right: 10px;
+}
+
+#menu1 ul ul li:hover {
+   background-color: #99c2ff;
+}
+
+#menu1 ul li:hover ul {
+    display: block;
+	position: relative;
+	margin: 7px;
+	float: left;
+}
+
+#home {
+	margin-top: 55px;
+	margin-left: 20px;
+	position: relative;
+}
+
+#fotografias {
+	margin-top: 55px;
+	margin-left: 20px;
+	position: relative;
+}
+
+#localização {
+	margin-top: 55px;
+	margin-left: 20px;
+	position: relative;
+}
+
+#poema1 {
+	margin-top: 55px;
+	margin-left: 20px;
+	position: relative;
+	background-color: none;
+}
+
+#poema2 {
+	margin-top: 55px;
+	margin-left: 20px;
+	position: relative;
+	background-color: none;
+}
+
+#poema3 {
+	margin-top: 55px;
+	margin-left: 20px;
+	position: relative;
+	background-color: none;
+}
+
+#videos {
+	margin-top: 55px;
+	margin-left: 20px;
+	position: relative;
+	background-color: none;
+}
+
+.h3 {
+	position: relative;
+	float: left;
+}
+
+.refhistoria {
+	text-decoration: none;
+	color: #80b3ff;
+}
+
+.legenda {
+	padding-left: 20px;
+}
+
+
+.espaço {
+	height: 25px;
+}
+
+.largura {
+	width: 30px;
+}
+
+.grande {
+	text-decoration: none;
+	color: black;
+}
+
+.logoubi {
+	width: 30px;
+	padding-top: 18px;
+    margin-top: -45px;
+    margin-right: -28px;
+    position: relative; 
+	
+}
+
+
+#centro {
+    text-align: center;
+}
+  
+  
+.titulo {
+    text-align: left;
+    background-color: #b3d1ff;
+    padding: 40px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    box-shadow: 2px 2px #888888;
+    border-top: 10px 10px #888888;;
+}
+
+.poesia {
+    opacity: 0.08;
+    position: absolute;
+    margin-top: -150px;
+    height: 370px;
+    width: 99%;
+}
+
+.poesia2 {
+    opacity: 0.08;
+    position: absolute;
+    margin-top: -150px;
+    height: 465px;
+    width: 99%;
+}
+
+.poesia3 {
+    opacity: 0.08;
+    position: absolute;
+    margin-top: -150px;
+    height: 300px;
+    width: 99%;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 2px;
+}
+
+.menu li {
+    background-color: #bfbfbf;
+    color: white;
+    padding: 8px;
+    margin-bottom: 7px;
+    font-size: 18px;
+    box-shadow: 2px 2px #888888;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+   
+.menu li:hover {
+    background-color: #001f4d;
+}   
+
+@media screen and (max-width:600px) {
+    /* Para Smartphones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+/* Para Tablets */
+@media screen and (min-width: 600px){
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 73%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 98.5%;}
+    .col-m-12 {width: 100%;}
+} 
+ 
+/* Para Computadores */
+@media screen and (min-width: 769px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 24%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 73%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 98.5%;}
+    .col-12 {width: 100%;}
+}

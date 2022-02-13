@@ -1,0 +1,3 @@
+nn,paper (%),ours_final_epoch (%),ours_best_epoch (%),average_training_time (s)
+inception-v3,91.19,91.71 ± 0.02,91.89 ± 0.14,18991.24 ± 15.29
+densenet-121,91.27,90.72 ± 0.27,91.09 ± 0.10,9226.21 ± 46.01

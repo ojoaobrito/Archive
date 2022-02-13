@@ -1,0 +1,730 @@
+Preparing directory ./
+Using model PreResNet164
+Loading dataset CIFAR100 from ./
+Files already downloaded and verified
+You are going to run models on the test set. Are you sure?
+Files already downloaded and verified
+Preparing model
+
+PreResNet(
+  (conv1): Conv2d(3, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (layer1): Sequential(
+    (0): Bottleneck(
+      (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(16, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (downsample): Sequential(
+        (0): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      )
+    )
+    (1): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (2): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (3): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (4): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (5): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (6): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (7): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (8): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (9): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (10): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (11): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (12): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (13): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (14): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (15): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (16): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (17): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): Bottleneck(
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(64, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+      )
+    )
+    (1): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (2): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (3): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (4): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (5): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (6): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (7): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (8): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (9): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (10): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (11): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (12): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (13): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (14): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (15): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (16): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (17): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(32, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): Bottleneck(
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+      )
+    )
+    (1): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (2): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (3): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (4): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (5): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (6): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (7): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (8): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (9): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (10): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (11): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (12): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (13): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (14): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (15): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (16): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+    (17): Bottleneck(
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv1): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn3): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (relu): ReLU(inplace=True)
+    )
+  )
+  (bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (avgpool): AvgPool2d(kernel_size=8, stride=8, padding=0)
+  (fc): Linear(in_features=256, out_features=100, bias=True)
+)
+SWAG training
+----  --------  ---------  --------  ---------  --------  -------------  ------------  --------  -----------
+  ep        lr    tr_loss    tr_acc    te_loss    te_acc  swa_te_loss    swa_te_acc        time    mem_usage
+----  --------  ---------  --------  ---------  --------  -------------  ------------  --------  -----------
+   1    0.1000     3.9389    9.2220     3.6564   12.8300                                45.9807       0.0331
+   2    0.1000     3.3331   18.7200                                                     43.1490       0.0331
+   3    0.1000     2.8842   26.4140                                                     43.1189       0.0331
+   4    0.1000     2.5655   32.6300                                                     43.1581       0.0331
+   5    0.1000     2.3158   38.0760     2.6498   32.4200                                45.5354       0.0331
+   6    0.1000     2.1440   41.7920                                                     43.1715       0.0331
+   7    0.1000     1.9866   45.3460                                                     43.2187       0.0331
+   8    0.1000     1.8919   47.8540                                                     43.1263       0.0331
+   9    0.1000     1.8036   50.0200                                                     43.1532       0.0331
+  10    0.1000     1.7287   51.5560     2.2300   41.4100                                45.5678       0.0331
+  11    0.1000     1.6683   53.2620                                                     43.2152       0.0331
+  12    0.1000     1.6077   54.8320                                                     43.1551       0.0331
+  13    0.1000     1.5693   55.6080                                                     43.2021       0.0331
+  14    0.1000     1.5288   56.8760                                                     43.1209       0.0331
+  15    0.1000     1.4838   58.0140     1.8765   50.1100                                45.4775       0.0331
+  16    0.1000     1.4574   58.5880                                                     43.1319       0.0331
+  17    0.1000     1.4368   58.8900                                                     43.1527       0.0331
+  18    0.1000     1.4102   59.7660                                                     43.1515       0.0331
+  19    0.1000     1.3853   60.6540                                                     43.1684       0.0331
+  20    0.1000     1.3671   60.8560     1.8511   51.7500                                45.5455       0.0331
+  21    0.1000     1.3468   61.4120                                                     43.1401       0.0331
+  22    0.1000     1.3192   61.8360                                                     43.1504       0.0331
+  23    0.1000     1.2993   62.5700                                                     43.1674       0.0331
+  24    0.1000     1.2930   62.7540                                                     43.1678       0.0331
+  25    0.1000     1.2775   62.9320     1.6290   56.0500                                45.4639       0.0331
+  26    0.1000     1.2720   63.3820                                                     43.1325       0.0331
+  27    0.1000     1.2549   63.5640                                                     43.1629       0.0331
+  28    0.1000     1.2415   63.9460                                                     43.2037       0.0331
+  29    0.1000     1.2276   64.4800                                                     43.1523       0.0331
+  30    0.1000     1.2086   64.9340     1.5851   56.5000                                45.5010       0.0331
+  31    0.1000     1.1976   65.1500                                                     43.1402       0.0331
+  32    0.1000     1.1855   65.5160                                                     43.1629       0.0331
+  33    0.1000     1.1881   65.4900                                                     43.1759       0.0331
+  34    0.1000     1.1766   65.8240                                                     43.1690       0.0331
+  35    0.1000     1.1777   65.9320     1.5829   57.2100                                45.5250       0.0331
+  36    0.1000     1.1596   66.1940                                                     43.1966       0.0331
+  37    0.1000     1.1537   66.4620                                                     43.1680       0.0331
+  38    0.1000     1.1505   66.2540                                                     43.1775       0.0331
+  39    0.1000     1.1442   66.6080                                                     43.1911       0.0331
+  40    0.1000     1.1337   66.8640     1.6429   54.9900                                45.5569       0.0331
+----  --------  ---------  --------  ---------  --------  -------------  ------------  --------  -----------
+  ep        lr    tr_loss    tr_acc  te_loss    te_acc    swa_te_loss    swa_te_acc        time    mem_usage
+----  --------  ---------  --------  ---------  --------  -------------  ------------  --------  -----------
+  41    0.1000     1.1252   67.1200                                                     43.1629       0.0331
+  42    0.1000     1.1314   66.9320                                                     43.1675       0.0331
+  43    0.1000     1.1164   67.4780                                                     43.1676       0.0331
+  44    0.1000     1.1012   67.7560                                                     43.1671       0.0331
+  45    0.1000     1.1130   67.3860     1.5366   58.5900                                45.5035       0.0331
+  46    0.1000     1.0968   67.9840                                                     43.1771       0.0331
+  47    0.1000     1.0939   68.1420                                                     43.1151       0.0331
+  48    0.1000     1.0923   67.8540                                                     43.1538       0.0331
+  49    0.1000     1.0947   67.9800                                                     43.1994       0.0331
+  50    0.1000     1.0824   68.2380     1.7545   55.0700                                45.5616       0.0331
+  51    0.1000     1.0807   68.3260                                                     43.1571       0.0331
+  52    0.0988     1.0701   68.7280                                                     43.1597       0.0331
+  53    0.0975     1.0555   68.8600                                                     43.1532       0.0331
+  54    0.0963     1.0508   69.0260                                                     43.1741       0.0331
+  55    0.0950     1.0451   69.3340     1.6186   56.5000                                45.6020       0.0331
+  56    0.0938     1.0286   69.6220                                                     43.0972       0.0331
+  57    0.0925     1.0143   70.1340                                                     43.1044       0.0331
+  58    0.0913     1.0097   70.2800                                                     43.1819       0.0331
+  59    0.0900     1.0055   70.4780                                                     43.1720       0.0331
+  60    0.0888     0.9824   70.7820     1.5361   59.7300                                45.4908       0.0331
+  61    0.0875     0.9698   71.3780                                                     43.2235       0.0331
+  62    0.0863     0.9717   71.1640                                                     43.1391       0.0331
+  63    0.0850     0.9508   71.6880                                                     43.1752       0.0331
+  64    0.0838     0.9411   71.8760                                                     43.1772       0.0331
+  65    0.0825     0.9436   71.9940     1.4113   61.3600                                45.5545       0.0331
+  66    0.0813     0.9326   72.3200                                                     43.1981       0.0331
+  67    0.0800     0.9191   72.4800                                                     43.1722       0.0331
+  68    0.0788     0.8959   73.3900                                                     43.1756       0.0331
+  69    0.0775     0.8946   73.2840                                                     43.1611       0.0331
+  70    0.0763     0.8945   73.2820     1.4346   61.0100                                45.5032       0.0331
+  71    0.0750     0.8657   73.9720                                                     43.1254       0.0331
+  72    0.0738     0.8598   74.2320                                                     43.2075       0.0331
+  73    0.0725     0.8574   74.1600                                                     43.1635       0.0331
+  74    0.0713     0.8469   74.6960                                                     43.1919       0.0331
+  75    0.0700     0.8340   74.9380     1.5877   58.9600                                45.5223       0.0331
+  76    0.0688     0.8234   75.3280                                                     43.1676       0.0331
+  77    0.0675     0.8152   75.4160                                                     43.1677       0.0331
+  78    0.0663     0.7890   76.0980                                                     43.1410       0.0331
+  79    0.0650     0.7892   76.2220                                                     43.1580       0.0331
+  80    0.0638     0.7709   76.7540     1.2585   65.3200                                45.4960       0.0331
+----  --------  ---------  --------  ---------  --------  -------------  ------------  --------  -----------
+  ep        lr    tr_loss    tr_acc  te_loss    te_acc    swa_te_loss    swa_te_acc        time    mem_usage
+----  --------  ---------  --------  ---------  --------  -------------  ------------  --------  -----------
+  81    0.0625     0.7572   77.0980                                                     43.1396       0.0331
+  82    0.0612     0.7471   77.3540                                                     43.1710       0.0331
+  83    0.0600     0.7409   77.3560                                                     43.1211       0.0331
+  84    0.0588     0.7231   78.0360                                                     43.1311       0.0331
+  85    0.0575     0.7066   78.4940     1.4702   61.9700                                45.5575       0.0331
+  86    0.0563     0.6912   79.0200                                                     43.1491       0.0331
+  87    0.0550     0.6800   79.2520                                                     43.2061       0.0331
+  88    0.0538     0.6747   79.4540                                                     43.1595       0.0331
+  89    0.0525     0.6712   79.5160                                                     43.1728       0.0331
+  90    0.0512     0.6542   80.0300     1.2495   66.7200                                45.5535       0.0331
+  91    0.0500     0.6337   80.5900                                                     43.1871       0.0331
+  92    0.0500     0.6361   80.4440                                                     43.1679       0.0331
+  93    0.0500     0.6372   80.4540                                                     43.1318       0.0331
+  94    0.0500     0.6384   80.4480                                                     43.1031       0.0331
+  95    0.0500     0.6314   80.5880     1.5181   62.5800                                45.5036       0.0331
+  96    0.0500     0.6338   80.4780                                                     43.1342       0.0331
+  97    0.0500     0.6367   80.3720                                                     43.1966       0.0331
+  98    0.0500     0.6385   80.2280                                                     43.1597       0.0331
+  99    0.0500     0.6299   80.7980                                                     43.2091       0.0331
+ 100    0.0500     0.6313   80.5680     1.3142   65.2900                                45.4678       0.0331
+updating sgd_ens
+ 101    0.0500     0.6330   80.4460                                                     45.6345       0.0396
+updating sgd_ens
+ 102    0.0500     0.6291   80.6000                                                     45.6650       0.0460
+updating sgd_ens
+ 103    0.0500     0.6145   81.1440                                                     45.7236       0.0524
+updating sgd_ens
+ 104    0.0500     0.6150   80.8820                                                     45.7043       0.0588
+updating sgd_ens
+ 105    0.0500     0.6303   80.5260     1.2635   65.9600         0.7793       78.1400   63.2360       0.0718
+updating sgd_ens
+ 106    0.0500     0.6007   81.5520                                                     45.7434       0.0782
+updating sgd_ens
+ 107    0.0500     0.6269   80.7720                                                     45.7088       0.0846
+updating sgd_ens
+ 108    0.0500     0.6077   81.3360                                                     45.7673       0.0913
+updating sgd_ens
+ 109    0.0500     0.6195   80.8120                                                     45.7065       0.1034
+updating sgd_ens
+ 110    0.0500     0.6098   81.1320     1.3018   66.0800         0.7514       79.2700   63.2791       0.1101
+updating sgd_ens
+ 111    0.0500     0.6092   81.3640                                                     45.7559       0.1169
+updating sgd_ens
+ 112    0.0500     0.5942   81.5280                                                     45.6316       0.1196
+updating sgd_ens
+ 113    0.0500     0.6112   81.2380                                                     45.7303       0.1255
+updating sgd_ens
+ 114    0.0500     0.5995   81.4940                                                     45.6690       0.1305
+updating sgd_ens
+ 115    0.0500     0.6117   81.1260     1.3530   65.3400         0.7486       79.3700   63.2169       0.1386
+updating sgd_ens
+ 116    0.0500     0.6152   80.9920                                                     45.6547       0.1450
+updating sgd_ens
+ 117    0.0500     0.5915   81.5760                                                     45.6338       0.1548
+updating sgd_ens
+ 118    0.0500     0.5988   81.4220                                                     45.7389       0.1608
+updating sgd_ens
+ 119    0.0500     0.5949   81.6200                                                     45.6323       0.1727
+updating sgd_ens
+ 120    0.0500     0.5882   81.7320     1.3317   64.9100         0.7440       79.6500   63.1227       0.1790
+updating sgd_ens
+----  --------  ---------  --------  ---------  --------  -------------  ------------  --------  -----------
+  ep        lr    tr_loss    tr_acc  te_loss    te_acc    swa_te_loss    swa_te_acc        time    mem_usage
+----  --------  ---------  --------  ---------  --------  -------------  ------------  --------  -----------
+ 121    0.0500     0.5949   81.6760                                                     45.7103       0.1863
+updating sgd_ens
+ 122    0.0500     0.5941   81.6400                                                     45.6339       0.1822
+updating sgd_ens
+ 123    0.0500     0.5894   81.6980                                                     45.6507       0.1814
+updating sgd_ens
+ 124    0.0500     0.5941   81.5300                                                     45.6740       0.1814
+updating sgd_ens
+ 125    0.0500     0.5941   81.6220     1.3185   64.8100         0.7421       79.8700   63.1096       0.1829
+updating sgd_ens
+ 126    0.0500     0.5922   81.8500                                                     45.7426       0.1816
+updating sgd_ens
+ 127    0.0500     0.5890   81.6920                                                     45.8134       0.1820
+updating sgd_ens
+ 128    0.0500     0.5852   81.8720                                                     45.7585       0.1795
+updating sgd_ens
+ 129    0.0500     0.5912   81.6240                                                     45.6427       0.1803
+updating sgd_ens
+ 130    0.0500     0.5849   81.8280     1.2096   68.1200         0.7407       79.7400   63.1684       0.1801
+updating sgd_ens
+ 131    0.0500     0.5733   82.2680                                                     45.6577       0.1802
+updating sgd_ens
+ 132    0.0500     0.5842   81.7680                                                     45.7418       0.1792
+updating sgd_ens
+ 133    0.0500     0.5863   81.9760                                                     45.6855       0.1794
+updating sgd_ens
+ 134    0.0500     0.5785   82.0140                                                     45.7517       0.1783
+updating sgd_ens
+ 135    0.0500     0.5825   82.0820     1.3478   65.6300         0.7399       79.6900   63.2247       0.1786
+updating sgd_ens
+ 136    0.0500     0.5821   81.9960                                                     45.6449       0.1813
+updating sgd_ens
+ 137    0.0500     0.5789   81.9840                                                     45.7203       0.1805
+updating sgd_ens
+ 138    0.0500     0.5771   82.1380                                                     45.7409       0.1815
+updating sgd_ens
+ 139    0.0500     0.5685   82.2220                                                     45.6494       0.1794
+updating sgd_ens
+ 140    0.0500     0.5782   82.1660     1.3440   65.6400         0.7377       79.7500   63.1923       0.1810
+updating sgd_ens
+ 141    0.0500     0.5796   82.0740                                                     45.7101       0.1806
+updating sgd_ens
+ 142    0.0500     0.5735   82.3260                                                     45.6600       0.1803
+updating sgd_ens
+ 143    0.0500     0.5711   82.1660                                                     45.6775       0.1803
+updating sgd_ens
+ 144    0.0500     0.5759   82.2240                                                     45.6937       0.1806
+updating sgd_ens
+ 145    0.0500     0.5786   82.0440     1.4192   64.0300         0.7373       79.6900   63.2199       0.1809
+updating sgd_ens
+ 146    0.0500     0.5670   82.4180                                                     45.7430       0.1813
+updating sgd_ens
+ 147    0.0500     0.5811   82.1200                                                     45.9157       0.1809
+updating sgd_ens
+ 148    0.0500     0.5740   82.0720                                                     45.6391       0.1798
+updating sgd_ens
+ 149    0.0500     0.5684   82.3100                                                     45.6881       0.1821
+updating sgd_ens
+ 150    0.0500     0.5625   82.7000     1.4594   63.4400         0.7366       79.7900   63.4658       0.1822
+TRAINING TIME: 6826.596999168396 s

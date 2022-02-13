@@ -1,0 +1,23 @@
+512 x 512	airplane.ppm
+500 x 480	baboon.ppm
+500 x 480 	baboonN.ppm (cores trocadas)
+720 x 576	barbara.ppm
+787 x 576	Boats.ppm
+512 x 480	cablecar.ppm
+522 x 522	domek.ppm
+320 x 240	ezmpeg_test.ppm
+409 x 366	Fig6_08.ppm
+1200 x 816	Fig6_10a.ppm
+512 x 512	fishing-boat.ppm (cores Prim e Sec)
+x 512 x 512	lena copy.ppm
+X 512 x 512	lena.ppm
+512 x 512	lenna.ppm
+768 x 512	monarch.ppm
+512 x 512	pepper.ppm
+512 x 512	pepperN.ppm (negativo)
+384 x 288	pic5.ppm
+227 x 149	rose.ppm
+sailboat.ppm
+soccer.ppm
+512 x 512	tiffany.ppm
+

@@ -1,0 +1,721 @@
+Files already downloaded and verified
+Files already downloaded and verified
+DenseNet(
+  (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (features): Sequential(
+    (dense_block_layer_0): Sequential(
+      (bottle_neck_layer_0): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_1): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(96, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_2): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_3): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(160, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_4): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(192, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_5): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(224, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(224, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (transition_layer_0): Transition(
+      (down_sample): Sequential(
+        (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (dense_block_layer_1): Sequential(
+      (bottle_neck_layer_0): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_1): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(160, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_2): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(192, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_3): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(224, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(224, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_4): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_5): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(288, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_6): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(320, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_7): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(352, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(352, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_8): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_9): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(416, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(416, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_10): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(448, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(448, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_11): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(480, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (transition_layer_1): Transition(
+      (down_sample): Sequential(
+        (0): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (dense_block_layer_2): Sequential(
+      (bottle_neck_layer_0): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_1): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(288, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_2): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(320, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_3): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(352, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(352, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_4): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_5): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(416, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(416, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_6): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(448, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(448, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_7): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(480, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_8): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_9): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(544, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(544, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_10): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(576, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_11): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(608, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(608, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_12): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(640, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_13): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(672, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_14): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(704, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(704, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_15): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(736, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(736, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_16): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(768, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_17): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(800, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(800, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_18): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(832, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(832, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_19): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(864, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(864, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_20): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(896, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(896, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_21): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(928, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(928, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_22): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(960, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_23): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(992, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(992, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (transition_layer_2): Transition(
+      (down_sample): Sequential(
+        (0): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (1): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (2): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (dense_block3): Sequential(
+      (bottle_neck_layer_0): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_1): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(544, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(544, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_2): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(576, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_3): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(608, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(608, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_4): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(640, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(640, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_5): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(672, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_6): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(704, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(704, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_7): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(736, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(736, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_8): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(768, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(768, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_9): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(800, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(800, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_10): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(832, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(832, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_11): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(864, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(864, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_12): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(896, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(896, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_13): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(928, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(928, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_14): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(960, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (bottle_neck_layer_15): Bottleneck(
+        (bottle_neck): Sequential(
+          (0): BatchNorm2d(992, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (1): ReLU(inplace=True)
+          (2): Conv2d(992, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (4): ReLU(inplace=True)
+          (5): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+    )
+    (bn): BatchNorm2d(1024, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (activation): ReLU(inplace=True)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (linear): Linear(in_features=1024, out_features=100, bias=True)
+)
+Epoch 1/100.. Time per epoch: 101.0399.. Average time per step: 0.2584.. Train loss: 1.4638.. Train accuracy: 0.4656.. Top-3 train accuracy: 0.7969.. Test loss: 1.1987.. Test accuracy: 0.5817.. Top-3 test accuracy: 0.8523
+Epoch 2/100.. Time per epoch: 101.1121.. Average time per step: 0.2586.. Train loss: 1.0798.. Train accuracy: 0.6128.. Top-3 train accuracy: 0.8870.. Test loss: 0.9176.. Test accuracy: 0.6719.. Top-3 test accuracy: 0.9151
+Epoch 3/100.. Time per epoch: 100.2716.. Average time per step: 0.2564.. Train loss: 0.9176.. Train accuracy: 0.6724.. Top-3 train accuracy: 0.9136.. Test loss: 1.0686.. Test accuracy: 0.6503.. Top-3 test accuracy: 0.9151
+Epoch 4/100.. Time per epoch: 100.7290.. Average time per step: 0.2576.. Train loss: 0.8041.. Train accuracy: 0.7133.. Top-3 train accuracy: 0.9313.. Test loss: 0.7304.. Test accuracy: 0.7445.. Top-3 test accuracy: 0.9418
+Epoch 5/100.. Time per epoch: 100.9328.. Average time per step: 0.2581.. Train loss: 0.7072.. Train accuracy: 0.7498.. Top-3 train accuracy: 0.9440.. Test loss: 0.7055.. Test accuracy: 0.7607.. Top-3 test accuracy: 0.9486
+Epoch 6/100.. Time per epoch: 101.2498.. Average time per step: 0.2590.. Train loss: 0.6301.. Train accuracy: 0.7785.. Top-3 train accuracy: 0.9535.. Test loss: 0.5860.. Test accuracy: 0.7955.. Top-3 test accuracy: 0.9606
+Epoch 7/100.. Time per epoch: 101.1336.. Average time per step: 0.2587.. Train loss: 0.5758.. Train accuracy: 0.7986.. Top-3 train accuracy: 0.9604.. Test loss: 0.5468.. Test accuracy: 0.8129.. Top-3 test accuracy: 0.9670
+Epoch 8/100.. Time per epoch: 101.0801.. Average time per step: 0.2585.. Train loss: 0.5230.. Train accuracy: 0.8159.. Top-3 train accuracy: 0.9668.. Test loss: 0.5115.. Test accuracy: 0.8174.. Top-3 test accuracy: 0.9688
+Epoch 9/100.. Time per epoch: 100.8093.. Average time per step: 0.2578.. Train loss: 0.4840.. Train accuracy: 0.8306.. Top-3 train accuracy: 0.9704.. Test loss: 0.5143.. Test accuracy: 0.8216.. Top-3 test accuracy: 0.9667
+Epoch 10/100.. Time per epoch: 100.9334.. Average time per step: 0.2581.. Train loss: 0.4435.. Train accuracy: 0.8431.. Top-3 train accuracy: 0.9745.. Test loss: 0.4589.. Test accuracy: 0.8447.. Top-3 test accuracy: 0.9736
+Epoch 11/100.. Time per epoch: 100.9784.. Average time per step: 0.2583.. Train loss: 0.4141.. Train accuracy: 0.8536.. Top-3 train accuracy: 0.9773.. Test loss: 0.4197.. Test accuracy: 0.8527.. Top-3 test accuracy: 0.9746
+Epoch 12/100.. Time per epoch: 100.9972.. Average time per step: 0.2583.. Train loss: 0.3888.. Train accuracy: 0.8645.. Top-3 train accuracy: 0.9790.. Test loss: 0.4084.. Test accuracy: 0.8645.. Top-3 test accuracy: 0.9803
+Epoch 13/100.. Time per epoch: 101.1064.. Average time per step: 0.2586.. Train loss: 0.3552.. Train accuracy: 0.8759.. Top-3 train accuracy: 0.9821.. Test loss: 0.3764.. Test accuracy: 0.8757.. Top-3 test accuracy: 0.9815
+Epoch 14/100.. Time per epoch: 101.0042.. Average time per step: 0.2583.. Train loss: 0.3360.. Train accuracy: 0.8810.. Top-3 train accuracy: 0.9837.. Test loss: 0.3629.. Test accuracy: 0.8777.. Top-3 test accuracy: 0.9815
+Epoch 15/100.. Time per epoch: 100.8667.. Average time per step: 0.2580.. Train loss: 0.3172.. Train accuracy: 0.8883.. Top-3 train accuracy: 0.9854.. Test loss: 0.3597.. Test accuracy: 0.8794.. Top-3 test accuracy: 0.9818
+Epoch 16/100.. Time per epoch: 100.6217.. Average time per step: 0.2573.. Train loss: 0.2980.. Train accuracy: 0.8949.. Top-3 train accuracy: 0.9873.. Test loss: 0.3672.. Test accuracy: 0.8784.. Top-3 test accuracy: 0.9808
+Epoch 17/100.. Time per epoch: 101.1422.. Average time per step: 0.2587.. Train loss: 0.2780.. Train accuracy: 0.9008.. Top-3 train accuracy: 0.9892.. Test loss: 0.3337.. Test accuracy: 0.8884.. Top-3 test accuracy: 0.9829
+Epoch 18/100.. Time per epoch: 101.0462.. Average time per step: 0.2584.. Train loss: 0.2634.. Train accuracy: 0.9088.. Top-3 train accuracy: 0.9895.. Test loss: 0.3763.. Test accuracy: 0.8768.. Top-3 test accuracy: 0.9799
+Epoch 19/100.. Time per epoch: 101.0606.. Average time per step: 0.2585.. Train loss: 0.2479.. Train accuracy: 0.9118.. Top-3 train accuracy: 0.9896.. Test loss: 0.3368.. Test accuracy: 0.8927.. Top-3 test accuracy: 0.9853
+Epoch 20/100.. Time per epoch: 101.1072.. Average time per step: 0.2586.. Train loss: 0.2339.. Train accuracy: 0.9169.. Top-3 train accuracy: 0.9913.. Test loss: 0.3799.. Test accuracy: 0.8814.. Top-3 test accuracy: 0.9830
+Epoch 21/100.. Time per epoch: 101.0251.. Average time per step: 0.2584.. Train loss: 0.2209.. Train accuracy: 0.9229.. Top-3 train accuracy: 0.9918.. Test loss: 0.3473.. Test accuracy: 0.8869.. Top-3 test accuracy: 0.9845
+Epoch 22/100.. Time per epoch: 101.0523.. Average time per step: 0.2584.. Train loss: 0.2095.. Train accuracy: 0.9254.. Top-3 train accuracy: 0.9927.. Test loss: 0.3481.. Test accuracy: 0.8921.. Top-3 test accuracy: 0.9843
+Epoch 23/100.. Time per epoch: 100.7803.. Average time per step: 0.2578.. Train loss: 0.1929.. Train accuracy: 0.9310.. Top-3 train accuracy: 0.9937.. Test loss: 0.3519.. Test accuracy: 0.8945.. Top-3 test accuracy: 0.9849
+Epoch 24/100.. Time per epoch: 100.9264.. Average time per step: 0.2581.. Train loss: 0.1857.. Train accuracy: 0.9337.. Top-3 train accuracy: 0.9943.. Test loss: 0.3580.. Test accuracy: 0.8909.. Top-3 test accuracy: 0.9854
+Epoch 25/100.. Time per epoch: 101.0715.. Average time per step: 0.2585.. Train loss: 0.1772.. Train accuracy: 0.9371.. Top-3 train accuracy: 0.9947.. Test loss: 0.3271.. Test accuracy: 0.8984.. Top-3 test accuracy: 0.9851
+Epoch 26/100.. Time per epoch: 100.7171.. Average time per step: 0.2576.. Train loss: 0.1639.. Train accuracy: 0.9420.. Top-3 train accuracy: 0.9955.. Test loss: 0.3761.. Test accuracy: 0.8874.. Top-3 test accuracy: 0.9857
+Epoch 27/100.. Time per epoch: 100.8632.. Average time per step: 0.2580.. Train loss: 0.1592.. Train accuracy: 0.9426.. Top-3 train accuracy: 0.9961.. Test loss: 0.3686.. Test accuracy: 0.8915.. Top-3 test accuracy: 0.9844
+Epoch 28/100.. Time per epoch: 100.6516.. Average time per step: 0.2574.. Train loss: 0.1455.. Train accuracy: 0.9474.. Top-3 train accuracy: 0.9967.. Test loss: 0.3503.. Test accuracy: 0.8966.. Top-3 test accuracy: 0.9857
+Epoch 29/100.. Time per epoch: 100.8866.. Average time per step: 0.2580.. Train loss: 0.1397.. Train accuracy: 0.9496.. Top-3 train accuracy: 0.9968.. Test loss: 0.3567.. Test accuracy: 0.8953.. Top-3 test accuracy: 0.9855
+Epoch 30/100.. Time per epoch: 100.8655.. Average time per step: 0.2580.. Train loss: 0.1324.. Train accuracy: 0.9528.. Top-3 train accuracy: 0.9968.. Test loss: 0.3677.. Test accuracy: 0.8967.. Top-3 test accuracy: 0.9866
+Epoch 31/100.. Time per epoch: 100.9684.. Average time per step: 0.2582.. Train loss: 0.1264.. Train accuracy: 0.9552.. Top-3 train accuracy: 0.9975.. Test loss: 0.3636.. Test accuracy: 0.8986.. Top-3 test accuracy: 0.9852
+Epoch 32/100.. Time per epoch: 100.7522.. Average time per step: 0.2577.. Train loss: 0.1179.. Train accuracy: 0.9576.. Top-3 train accuracy: 0.9975.. Test loss: 0.3712.. Test accuracy: 0.8989.. Top-3 test accuracy: 0.9856
+Epoch 33/100.. Time per epoch: 100.6973.. Average time per step: 0.2575.. Train loss: 0.1132.. Train accuracy: 0.9595.. Top-3 train accuracy: 0.9979.. Test loss: 0.3494.. Test accuracy: 0.9013.. Top-3 test accuracy: 0.9870
+Epoch 34/100.. Time per epoch: 100.9406.. Average time per step: 0.2582.. Train loss: 0.1131.. Train accuracy: 0.9588.. Top-3 train accuracy: 0.9980.. Test loss: 0.3821.. Test accuracy: 0.8938.. Top-3 test accuracy: 0.9861
+Epoch 35/100.. Time per epoch: 101.0144.. Average time per step: 0.2583.. Train loss: 0.0991.. Train accuracy: 0.9646.. Top-3 train accuracy: 0.9985.. Test loss: 0.3973.. Test accuracy: 0.8979.. Top-3 test accuracy: 0.9864
+Epoch 36/100.. Time per epoch: 101.2427.. Average time per step: 0.2589.. Train loss: 0.1003.. Train accuracy: 0.9638.. Top-3 train accuracy: 0.9988.. Test loss: 0.3692.. Test accuracy: 0.9004.. Top-3 test accuracy: 0.9863
+Epoch 37/100.. Time per epoch: 101.0455.. Average time per step: 0.2584.. Train loss: 0.0878.. Train accuracy: 0.9702.. Top-3 train accuracy: 0.9988.. Test loss: 0.3769.. Test accuracy: 0.9036.. Top-3 test accuracy: 0.9871
+Epoch 38/100.. Time per epoch: 100.9671.. Average time per step: 0.2582.. Train loss: 0.1000.. Train accuracy: 0.9642.. Top-3 train accuracy: 0.9984.. Test loss: 0.3643.. Test accuracy: 0.9039.. Top-3 test accuracy: 0.9869
+Epoch 39/100.. Time per epoch: 101.0155.. Average time per step: 0.2584.. Train loss: 0.0895.. Train accuracy: 0.9682.. Top-3 train accuracy: 0.9987.. Test loss: 0.4015.. Test accuracy: 0.8992.. Top-3 test accuracy: 0.9864
+Epoch 40/100.. Time per epoch: 100.7469.. Average time per step: 0.2577.. Train loss: 0.0834.. Train accuracy: 0.9706.. Top-3 train accuracy: 0.9988.. Test loss: 0.3504.. Test accuracy: 0.9036.. Top-3 test accuracy: 0.9870
+Epoch 41/100.. Time per epoch: 100.8842.. Average time per step: 0.2580.. Train loss: 0.0821.. Train accuracy: 0.9709.. Top-3 train accuracy: 0.9989.. Test loss: 0.3749.. Test accuracy: 0.9032.. Top-3 test accuracy: 0.9875
+Epoch 42/100.. Time per epoch: 100.8864.. Average time per step: 0.2580.. Train loss: 0.0807.. Train accuracy: 0.9715.. Top-3 train accuracy: 0.9990.. Test loss: 0.3591.. Test accuracy: 0.9082.. Top-3 test accuracy: 0.9889
+Epoch 43/100.. Time per epoch: 100.8039.. Average time per step: 0.2578.. Train loss: 0.0718.. Train accuracy: 0.9758.. Top-3 train accuracy: 0.9993.. Test loss: 0.3878.. Test accuracy: 0.9051.. Top-3 test accuracy: 0.9874
+Epoch 44/100.. Time per epoch: 100.9682.. Average time per step: 0.2582.. Train loss: 0.0723.. Train accuracy: 0.9741.. Top-3 train accuracy: 0.9991.. Test loss: 0.4031.. Test accuracy: 0.8981.. Top-3 test accuracy: 0.9859
+Epoch 45/100.. Time per epoch: 101.1077.. Average time per step: 0.2586.. Train loss: 0.0729.. Train accuracy: 0.9733.. Top-3 train accuracy: 0.9992.. Test loss: 0.3962.. Test accuracy: 0.9049.. Top-3 test accuracy: 0.9864
+Epoch 46/100.. Time per epoch: 100.9270.. Average time per step: 0.2581.. Train loss: 0.0694.. Train accuracy: 0.9759.. Top-3 train accuracy: 0.9991.. Test loss: 0.4186.. Test accuracy: 0.8983.. Top-3 test accuracy: 0.9875
+Epoch 47/100.. Time per epoch: 101.3098.. Average time per step: 0.2591.. Train loss: 0.0648.. Train accuracy: 0.9775.. Top-3 train accuracy: 0.9994.. Test loss: 0.3812.. Test accuracy: 0.9046.. Top-3 test accuracy: 0.9870
+Epoch 48/100.. Time per epoch: 100.6469.. Average time per step: 0.2574.. Train loss: 0.0606.. Train accuracy: 0.9788.. Top-3 train accuracy: 0.9993.. Test loss: 0.4185.. Test accuracy: 0.8977.. Top-3 test accuracy: 0.9851
+Epoch 49/100.. Time per epoch: 101.0380.. Average time per step: 0.2584.. Train loss: 0.0638.. Train accuracy: 0.9777.. Top-3 train accuracy: 0.9993.. Test loss: 0.3942.. Test accuracy: 0.9083.. Top-3 test accuracy: 0.9858
+Epoch 50/100.. Time per epoch: 100.9043.. Average time per step: 0.2581.. Train loss: 0.0628.. Train accuracy: 0.9784.. Top-3 train accuracy: 0.9992.. Test loss: 0.4131.. Test accuracy: 0.9033.. Top-3 test accuracy: 0.9854
+Epoch 51/100.. Time per epoch: 100.9597.. Average time per step: 0.2582.. Train loss: 0.0622.. Train accuracy: 0.9784.. Top-3 train accuracy: 0.9994.. Test loss: 0.3954.. Test accuracy: 0.9066.. Top-3 test accuracy: 0.9867
+Epoch 52/100.. Time per epoch: 100.8278.. Average time per step: 0.2579.. Train loss: 0.0565.. Train accuracy: 0.9809.. Top-3 train accuracy: 0.9994.. Test loss: 0.3961.. Test accuracy: 0.9090.. Top-3 test accuracy: 0.9856
+Epoch 53/100.. Time per epoch: 100.7261.. Average time per step: 0.2576.. Train loss: 0.0532.. Train accuracy: 0.9806.. Top-3 train accuracy: 0.9994.. Test loss: 0.3857.. Test accuracy: 0.9088.. Top-3 test accuracy: 0.9887
+Epoch 54/100.. Time per epoch: 100.9792.. Average time per step: 0.2583.. Train loss: 0.0530.. Train accuracy: 0.9816.. Top-3 train accuracy: 0.9996.. Test loss: 0.4449.. Test accuracy: 0.9039.. Top-3 test accuracy: 0.9860
+Epoch 55/100.. Time per epoch: 102.4293.. Average time per step: 0.2620.. Train loss: 0.0540.. Train accuracy: 0.9806.. Top-3 train accuracy: 0.9996.. Test loss: 0.3977.. Test accuracy: 0.9093.. Top-3 test accuracy: 0.9876
+Epoch 56/100.. Time per epoch: 102.5667.. Average time per step: 0.2623.. Train loss: 0.0493.. Train accuracy: 0.9827.. Top-3 train accuracy: 0.9996.. Test loss: 0.4009.. Test accuracy: 0.9097.. Top-3 test accuracy: 0.9871
+Epoch 57/100.. Time per epoch: 102.5424.. Average time per step: 0.2623.. Train loss: 0.0586.. Train accuracy: 0.9799.. Top-3 train accuracy: 0.9995.. Test loss: 0.4073.. Test accuracy: 0.9054.. Top-3 test accuracy: 0.9862
+Epoch 58/100.. Time per epoch: 102.4999.. Average time per step: 0.2621.. Train loss: 0.0461.. Train accuracy: 0.9835.. Top-3 train accuracy: 0.9997.. Test loss: 0.3962.. Test accuracy: 0.9113.. Top-3 test accuracy: 0.9873
+Epoch 59/100.. Time per epoch: 102.6056.. Average time per step: 0.2624.. Train loss: 0.0498.. Train accuracy: 0.9827.. Top-3 train accuracy: 0.9996.. Test loss: 0.4140.. Test accuracy: 0.9064.. Top-3 test accuracy: 0.9867
+Epoch 60/100.. Time per epoch: 102.5483.. Average time per step: 0.2623.. Train loss: 0.0488.. Train accuracy: 0.9828.. Top-3 train accuracy: 0.9995.. Test loss: 0.4280.. Test accuracy: 0.9059.. Top-3 test accuracy: 0.9885
+Epoch 61/100.. Time per epoch: 102.5059.. Average time per step: 0.2622.. Train loss: 0.0429.. Train accuracy: 0.9853.. Top-3 train accuracy: 0.9996.. Test loss: 0.3897.. Test accuracy: 0.9151.. Top-3 test accuracy: 0.9887
+Epoch 62/100.. Time per epoch: 102.5427.. Average time per step: 0.2623.. Train loss: 0.0513.. Train accuracy: 0.9820.. Top-3 train accuracy: 0.9996.. Test loss: 0.3957.. Test accuracy: 0.9107.. Top-3 test accuracy: 0.9866
+Epoch 63/100.. Time per epoch: 102.5909.. Average time per step: 0.2624.. Train loss: 0.0425.. Train accuracy: 0.9853.. Top-3 train accuracy: 0.9996.. Test loss: 0.4168.. Test accuracy: 0.9064.. Top-3 test accuracy: 0.9888
+Epoch 64/100.. Time per epoch: 102.5746.. Average time per step: 0.2623.. Train loss: 0.0400.. Train accuracy: 0.9856.. Top-3 train accuracy: 0.9996.. Test loss: 0.4176.. Test accuracy: 0.9087.. Top-3 test accuracy: 0.9870
+Epoch 65/100.. Time per epoch: 102.6682.. Average time per step: 0.2626.. Train loss: 0.0482.. Train accuracy: 0.9831.. Top-3 train accuracy: 0.9996.. Test loss: 0.4604.. Test accuracy: 0.9065.. Top-3 test accuracy: 0.9853
+Epoch 66/100.. Time per epoch: 102.5845.. Average time per step: 0.2624.. Train loss: 0.0433.. Train accuracy: 0.9845.. Top-3 train accuracy: 0.9998.. Test loss: 0.4223.. Test accuracy: 0.9092.. Top-3 test accuracy: 0.9872
+Epoch 67/100.. Time per epoch: 102.5092.. Average time per step: 0.2622.. Train loss: 0.0361.. Train accuracy: 0.9877.. Top-3 train accuracy: 0.9997.. Test loss: 0.4173.. Test accuracy: 0.9085.. Top-3 test accuracy: 0.9877
+Epoch 68/100.. Time per epoch: 102.6393.. Average time per step: 0.2625.. Train loss: 0.0425.. Train accuracy: 0.9846.. Top-3 train accuracy: 0.9996.. Test loss: 0.4208.. Test accuracy: 0.9058.. Top-3 test accuracy: 0.9858
+Epoch 69/100.. Time per epoch: 102.5134.. Average time per step: 0.2622.. Train loss: 0.0399.. Train accuracy: 0.9855.. Top-3 train accuracy: 0.9997.. Test loss: 0.4311.. Test accuracy: 0.9055.. Top-3 test accuracy: 0.9873
+Epoch 70/100.. Time per epoch: 102.4927.. Average time per step: 0.2621.. Train loss: 0.0411.. Train accuracy: 0.9858.. Top-3 train accuracy: 0.9996.. Test loss: 0.4170.. Test accuracy: 0.9093.. Top-3 test accuracy: 0.9863
+Epoch 71/100.. Time per epoch: 102.5823.. Average time per step: 0.2624.. Train loss: 0.0379.. Train accuracy: 0.9871.. Top-3 train accuracy: 0.9996.. Test loss: 0.4522.. Test accuracy: 0.9058.. Top-3 test accuracy: 0.9844
+Epoch 72/100.. Time per epoch: 102.5275.. Average time per step: 0.2622.. Train loss: 0.0387.. Train accuracy: 0.9865.. Top-3 train accuracy: 0.9998.. Test loss: 0.4356.. Test accuracy: 0.9061.. Top-3 test accuracy: 0.9872
+Epoch 73/100.. Time per epoch: 102.5984.. Average time per step: 0.2624.. Train loss: 0.0329.. Train accuracy: 0.9889.. Top-3 train accuracy: 0.9999.. Test loss: 0.4376.. Test accuracy: 0.9082.. Top-3 test accuracy: 0.9872
+Epoch 74/100.. Time per epoch: 102.5465.. Average time per step: 0.2623.. Train loss: 0.0343.. Train accuracy: 0.9884.. Top-3 train accuracy: 0.9997.. Test loss: 0.4472.. Test accuracy: 0.9062.. Top-3 test accuracy: 0.9879
+Epoch 75/100.. Time per epoch: 102.5759.. Average time per step: 0.2623.. Train loss: 0.0336.. Train accuracy: 0.9884.. Top-3 train accuracy: 0.9999.. Test loss: 0.4302.. Test accuracy: 0.9112.. Top-3 test accuracy: 0.9867
+Epoch 76/100.. Time per epoch: 102.5554.. Average time per step: 0.2623.. Train loss: 0.0350.. Train accuracy: 0.9882.. Top-3 train accuracy: 0.9998.. Test loss: 0.4410.. Test accuracy: 0.9071.. Top-3 test accuracy: 0.9858
+Epoch 77/100.. Time per epoch: 102.5833.. Average time per step: 0.2624.. Train loss: 0.0338.. Train accuracy: 0.9881.. Top-3 train accuracy: 0.9997.. Test loss: 0.4271.. Test accuracy: 0.9127.. Top-3 test accuracy: 0.9866
+Epoch 78/100.. Time per epoch: 102.6378.. Average time per step: 0.2625.. Train loss: 0.0341.. Train accuracy: 0.9882.. Top-3 train accuracy: 0.9998.. Test loss: 0.4436.. Test accuracy: 0.9071.. Top-3 test accuracy: 0.9878
+Epoch 79/100.. Time per epoch: 102.6268.. Average time per step: 0.2625.. Train loss: 0.0347.. Train accuracy: 0.9876.. Top-3 train accuracy: 0.9998.. Test loss: 0.4767.. Test accuracy: 0.9085.. Top-3 test accuracy: 0.9862
+Epoch 80/100.. Time per epoch: 102.5745.. Average time per step: 0.2623.. Train loss: 0.0316.. Train accuracy: 0.9888.. Top-3 train accuracy: 0.9999.. Test loss: 0.4936.. Test accuracy: 0.8959.. Top-3 test accuracy: 0.9868
+Epoch 81/100.. Time per epoch: 102.5375.. Average time per step: 0.2622.. Train loss: 0.0339.. Train accuracy: 0.9882.. Top-3 train accuracy: 0.9998.. Test loss: 0.4472.. Test accuracy: 0.9078.. Top-3 test accuracy: 0.9887
+Epoch 82/100.. Time per epoch: 102.4970.. Average time per step: 0.2621.. Train loss: 0.0319.. Train accuracy: 0.9886.. Top-3 train accuracy: 0.9998.. Test loss: 0.4597.. Test accuracy: 0.9097.. Top-3 test accuracy: 0.9871
+Epoch 83/100.. Time per epoch: 102.4562.. Average time per step: 0.2620.. Train loss: 0.0312.. Train accuracy: 0.9896.. Top-3 train accuracy: 0.9998.. Test loss: 0.4457.. Test accuracy: 0.9125.. Top-3 test accuracy: 0.9867
+Epoch 84/100.. Time per epoch: 102.5582.. Average time per step: 0.2623.. Train loss: 0.0330.. Train accuracy: 0.9888.. Top-3 train accuracy: 0.9997.. Test loss: 0.4442.. Test accuracy: 0.9086.. Top-3 test accuracy: 0.9871
+Epoch 85/100.. Time per epoch: 102.6250.. Average time per step: 0.2625.. Train loss: 0.0295.. Train accuracy: 0.9898.. Top-3 train accuracy: 0.9998.. Test loss: 0.4564.. Test accuracy: 0.9060.. Top-3 test accuracy: 0.9870
+Epoch 86/100.. Time per epoch: 102.5431.. Average time per step: 0.2623.. Train loss: 0.0322.. Train accuracy: 0.9887.. Top-3 train accuracy: 0.9997.. Test loss: 0.4260.. Test accuracy: 0.9118.. Top-3 test accuracy: 0.9877
+Epoch 87/100.. Time per epoch: 102.5913.. Average time per step: 0.2624.. Train loss: 0.0309.. Train accuracy: 0.9899.. Top-3 train accuracy: 0.9998.. Test loss: 0.4280.. Test accuracy: 0.9141.. Top-3 test accuracy: 0.9880
+Epoch 88/100.. Time per epoch: 102.4960.. Average time per step: 0.2621.. Train loss: 0.0307.. Train accuracy: 0.9890.. Top-3 train accuracy: 0.9998.. Test loss: 0.4184.. Test accuracy: 0.9152.. Top-3 test accuracy: 0.9890
+Epoch 89/100.. Time per epoch: 101.8092.. Average time per step: 0.2604.. Train loss: 0.0273.. Train accuracy: 0.9904.. Top-3 train accuracy: 0.9998.. Test loss: 0.4244.. Test accuracy: 0.9123.. Top-3 test accuracy: 0.9861
+Epoch 90/100.. Time per epoch: 97.1338.. Average time per step: 0.2484.. Train loss: 0.0256.. Train accuracy: 0.9914.. Top-3 train accuracy: 1.0000.. Test loss: 0.4367.. Test accuracy: 0.9115.. Top-3 test accuracy: 0.9882
+Epoch 91/100.. Time per epoch: 97.7530.. Average time per step: 0.2500.. Train loss: 0.0315.. Train accuracy: 0.9892.. Top-3 train accuracy: 0.9999.. Test loss: 0.4490.. Test accuracy: 0.9095.. Top-3 test accuracy: 0.9858
+Epoch 92/100.. Time per epoch: 97.2890.. Average time per step: 0.2488.. Train loss: 0.0272.. Train accuracy: 0.9904.. Top-3 train accuracy: 0.9998.. Test loss: 0.4689.. Test accuracy: 0.9074.. Top-3 test accuracy: 0.9851
+Epoch 93/100.. Time per epoch: 97.5075.. Average time per step: 0.2494.. Train loss: 0.0261.. Train accuracy: 0.9907.. Top-3 train accuracy: 0.9999.. Test loss: 0.4310.. Test accuracy: 0.9120.. Top-3 test accuracy: 0.9885
+Epoch 94/100.. Time per epoch: 97.3407.. Average time per step: 0.2490.. Train loss: 0.0275.. Train accuracy: 0.9902.. Top-3 train accuracy: 1.0000.. Test loss: 0.4728.. Test accuracy: 0.9044.. Top-3 test accuracy: 0.9844
+Epoch 95/100.. Time per epoch: 97.1181.. Average time per step: 0.2484.. Train loss: 0.0249.. Train accuracy: 0.9914.. Top-3 train accuracy: 0.9998.. Test loss: 0.4283.. Test accuracy: 0.9126.. Top-3 test accuracy: 0.9893
+Epoch 96/100.. Time per epoch: 97.3676.. Average time per step: 0.2490.. Train loss: 0.0279.. Train accuracy: 0.9902.. Top-3 train accuracy: 0.9998.. Test loss: 0.4576.. Test accuracy: 0.9089.. Top-3 test accuracy: 0.9861
+Epoch 97/100.. Time per epoch: 97.4609.. Average time per step: 0.2493.. Train loss: 0.0237.. Train accuracy: 0.9920.. Top-3 train accuracy: 0.9999.. Test loss: 0.4442.. Test accuracy: 0.9100.. Top-3 test accuracy: 0.9872
+Epoch 98/100.. Time per epoch: 97.3830.. Average time per step: 0.2491.. Train loss: 0.0246.. Train accuracy: 0.9919.. Top-3 train accuracy: 0.9999.. Test loss: 0.4515.. Test accuracy: 0.9070.. Top-3 test accuracy: 0.9875
+Epoch 99/100.. Time per epoch: 97.4058.. Average time per step: 0.2491.. Train loss: 0.0273.. Train accuracy: 0.9899.. Top-3 train accuracy: 0.9999.. Test loss: 0.4762.. Test accuracy: 0.9039.. Top-3 test accuracy: 0.9871
+Epoch 100/100.. Time per epoch: 97.0112.. Average time per step: 0.2481.. Train loss: 0.0245.. Train accuracy: 0.9915.. Top-3 train accuracy: 0.9999.. Test loss: 0.4800.. Test accuracy: 0.9089.. Top-3 test accuracy: 0.9854
+TRAINING TIME: 10109.927435159683 s

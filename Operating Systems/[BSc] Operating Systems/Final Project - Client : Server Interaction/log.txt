@@ -1,0 +1,25 @@
+Successful Authentication by aluno 1234
+Successful Authentication by aluno 1234
+
+Successful Authentication by aluno 1234
+File information ("cs.h") by aluno 1234
+Successful Authentication by aluno 1234
+
+Failed Authentication by admin 4333
+Successful Authentication by admin 4333
+Failed Authentication by exit
+Successful Authentication by admin 4333
+Failed Authentication by admin 4333show cs.h
+
+Successful Authentication by aluno 1234
+File information ("cs.h") by aluno 1234
+Successful Authentication by aluno 1234
+Failed Authentication by aluno 1234exito 1234
+Successful Authentication by aluno 1234
+Failed Authentication by aluno 1234log
+
+Successful Authentication by admin 4333
+Failed Authentication by clear
+Successful Authentication by admin 4333
+Failed Authentication by admin 4333show cs.h
+

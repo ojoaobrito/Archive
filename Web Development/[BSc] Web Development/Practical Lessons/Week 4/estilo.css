@@ -1,0 +1,19 @@
+h1, h2 {
+	font-family: sans-serif;
+	color: #3366CC;
+}
+
+body {
+	   background-color: #F0E68C;
+}
+
+h1 {
+    background-color: #D3D3D3;
+	border-width: medium;
+	border-style: dashed;
+}
+
+h2 {
+    text-decoration: underline;
+}
+

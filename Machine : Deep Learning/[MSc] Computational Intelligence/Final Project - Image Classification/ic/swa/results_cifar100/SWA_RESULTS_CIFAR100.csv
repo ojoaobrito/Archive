@@ -1,0 +1,3 @@
+nn,paper (%),ours_final_epoch (%),ours_best_epoch (%),average_training_time (s)
+vgg-16,73.91 ± 0.12,73.67 ± 0.25,73.67 ± 0.25,1642.23 ± 5.53
+(pre)resnet-164,79.77 ± 0.17,79.53 ± 0.26,79.56 ± 0.29,6830.03 ± 2.78

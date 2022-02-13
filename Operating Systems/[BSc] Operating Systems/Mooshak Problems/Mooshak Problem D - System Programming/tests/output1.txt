@@ -1,0 +1,6 @@
+Tamanho Diferente
+Blocks Usados Igual
+User Permissions Igual
+Group Permissions Diferente
+Other Permissions Igual
+Ficheiros Diferente

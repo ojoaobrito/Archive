@@ -1,0 +1,65 @@
+LISTA PROGRAMAS:
+
+ > 3_1.c (transforma segundos em hh, mm, ss);
+ 
+ > 3_2.c (parte inteira e fracionário de um número);
+
+ > 3_13.c (concentrações);
+ 
+ > 5_1.c (par ou ímpar);
+ 
+ > 5_5.c (média de uma sequência de números);
+
+ > 5_6.c (tabuada);
+
+ > 5_7.c (tabela quadrado);
+
+ > 6_2.c (soma de elementos);
+
+ > 6_3.c (máximo e mínimo de uma sequência);
+
+ > 6_4.c (posição do máximo e do mínimo numa sequência);
+
+ > 6_5.c (Seq.C = Seq.A + Seq.B);
+
+ > 6_6.c (Seq.A = Seq.B);
+
+ > 6_7.c (média de uma sequência de números);
+
+ > 6_8.c (escrita de matrizes);
+
+ > 6_9.c (soma de elementos de uma matriz);
+
+ > 6_10.c (máximo e mínimo de uma matriz);
+
+ > 6_11.c (posição do máximo e do mínimo numa matriz);
+
+ > 6_12.c (soma de duas matrizes);
+
+ > 6_13.c (matriz transposta);
+
+ > 7_2.c (comprimento de uma string);
+
+ > 7_3.c (escrever uma string em maiúsculas - INCOMPLETO);
+
+ > 8_1.c (soma de números complexos);
+
+ > 8_2.c (comparar dados);
+
+ > 8_3.c (tempo - INCOMPLETO);
+
+ > 8_4.c (menu interativo);
+
+ > 8_6.c (pontos mais perto ou distantes);
+
+ > 9_1.c (copiar de um ficheiro para outro);
+
+ > 9_2.c (copiar "x" linhas de um ficheiro para outro);
+
+ > 9_3.c (encontrar uma palavra num ficheiro);
+
+ > resolv.c (fórmula resolvente);
+
+ > teste.c (menu interativo com lista de funcionários de uma empresa);
+
+ > teste2.c (editar um ficheiro - INCOMPLETO);
