@@ -1,0 +1,8 @@
+prefix=/home/viki/catkin_ws/install
+
+Name: ia
+Description: Description of ia
+Version: 0.0.1
+Cflags: -I/home/viki/catkin_ws/install/include
+Libs: -L/home/viki/catkin_ws/install/lib -lia
+Requires: roscpp rospy std_msgs

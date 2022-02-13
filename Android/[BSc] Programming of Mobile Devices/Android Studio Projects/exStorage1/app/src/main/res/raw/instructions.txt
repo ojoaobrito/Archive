@@ -1,0 +1,4 @@
+To use this app, start writing your note down, and exit or save anytime you want. 
+1. If you exit, any partial note will be saved automatically but not sent anywhere. 
+2. When you feel the note is complete, just save it and send it to your e-mail.
+It will be made available in your external storage also.

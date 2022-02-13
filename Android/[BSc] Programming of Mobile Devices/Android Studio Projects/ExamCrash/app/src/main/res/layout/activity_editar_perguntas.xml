@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".EditarPerguntas">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/categoria_texto"
+            android:text="Categoria"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#2558ae"
+            android:textSize="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/categoria_inserir"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:id="@+id/categoria_inserir"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:textSize="25dp"
+            android:hint="categoria"
+            android:textStyle="italic"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:backgroundTint="#737373"
+            app:layout_constraintTop_toBottomOf="@+id/categoria_texto"
+            app:layout_constraintBottom_toTopOf="@+id/pergunta_e_respostas_texto"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/pergunta_e_respostas_texto"
+            android:text="Pergunta e Respostas"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#2558ae"
+            android:textSize="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/categoria_inserir"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/linear_pergunta_e_respostas"/>
+
+        <LinearLayout
+            android:id="@+id/linear_pergunta_e_respostas"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/pergunta_e_respostas_texto"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ok_botao">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:id="@+id/pergunta_inserir"
+                android:layout_marginBottom="20dp"
+                android:textSize="25dp"
+                android:hint="pergunta"
+                android:textStyle="italic"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:backgroundTint="#737373"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/linear_perguntas_linha_1"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="visible"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:id="@+id/resposta_inserir_1"
+                    android:textSize="20dp"
+                    android:layout_weight="25"
+                    android:hint="resposta"
+                    android:textStyle="italic"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:backgroundTint="#737373"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox android:id="@+id/certa_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C"
+                    android:checked="false"/>
+
+                <CheckBox android:id="@+id/errada_nao_desconta_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="E"
+                    android:checked="false"/>
+
+                <CheckBox android:id="@+id/errada_desconta_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="E + P"
+                    android:checked="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_perguntas_linha_2"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="visible"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:id="@+id/resposta_inserir_2"
+                    android:textSize="20dp"
+                    android:layout_weight="25"
+                    android:hint="resposta"
+                    android:textStyle="italic"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:backgroundTint="#737373"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox android:id="@+id/certa_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C"
+                    android:checked="false"/>
+
+                <CheckBox android:id="@+id/errada_nao_desconta_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="E"
+                    android:checked="false"/>
+
+                <CheckBox android:id="@+id/errada_desconta_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="E + P"
+                    android:checked="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_perguntas_linha_3"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="visible"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:id="@+id/resposta_inserir_3"
+                    android:textSize="20dp"
+                    android:layout_weight="25"
+                    android:hint="resposta"
+                    android:textStyle="italic"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:backgroundTint="#737373"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox android:id="@+id/certa_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C"
+                    android:checked="false"/>
+
+                <CheckBox android:id="@+id/errada_nao_desconta_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="E"
+                    android:checked="false"/>
+
+                <CheckBox android:id="@+id/errada_desconta_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="E + P"
+                    android:checked="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_perguntas_linha_4"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="visible"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:id="@+id/resposta_inserir_4"
+                    android:textSize="20dp"
+                    android:layout_weight="25"
+                    android:hint="resposta"
+                    android:textStyle="italic"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:backgroundTint="#737373"
+                    tools:ignore="MissingConstraints" />
+
+                <CheckBox android:id="@+id/certa_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C"
+                    android:checked="false"/>
+
+                <CheckBox android:id="@+id/errada_nao_desconta_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="E"
+                    android:checked="false"/>
+
+                <CheckBox android:id="@+id/errada_desconta_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="E + P"
+                    android:checked="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ok_botao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:onClick="guardarPergunta"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#2558ae"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/linear_pergunta_e_respostas"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

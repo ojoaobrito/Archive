@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/botao_fundo.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/drawable/botao_fundo_historico.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/drawable/categoria.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/drawable/categoria_icon.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/drawable/pergunta_fundo.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/drawable/resposta_fundo.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/drawable/resposta_fundo_errado_escolhido.xml" value="0.13802083333333334" />
+        <entry key="app/src/main/res/layout/activity_categorias.xml" value="0.22871376811594202" />
+        <entry key="app/src/main/res/layout/activity_categorias_historico.xml" value="0.22871376811594202" />
+        <entry key="app/src/main/res/layout/activity_editar_perguntas.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_historico.xml" value="0.16394927536231885" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.2056983447873316" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.10512831806520372" />
+        <entry key="app/src/main/res/layout/activity_menu_principal.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/activity_perguntas.xml" value="0.16394927536231885" />
+        <entry key="app/src/main/res/layout/botao_historico.xml" value="0.18614130434782608" />
+        <entry key="app/src/main/res/layout/botao_perguntas.xml" value="0.22871376811594202" />
+        <entry key="app/src/main/res/layout/linha_categoria.xml" value="0.13870901226176965" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13802083333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

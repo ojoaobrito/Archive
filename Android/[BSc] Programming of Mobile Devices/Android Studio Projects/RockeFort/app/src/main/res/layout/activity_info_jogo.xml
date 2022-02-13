@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoJogo">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/background"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nome_jogador"
+        android:text="Nome Jogador"
+        android:textSize="40dp"
+        android:textColor="#006bb3"
+        android:textStyle="bold"
+        android:shadowColor = "#000"
+        android:shadowDx = "2"
+        android:shadowDy = "2"
+        android:shadowRadius = "3"
+        android:layout_marginTop="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nome_jogo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nome_jogo"
+        android:text="Nome Jogo | Nível"
+        android:textSize="30dp"
+        android:textColor="#006bb3"
+        android:textStyle="bold"
+        android:shadowColor = "#000"
+        android:shadowDx = "3"
+        android:shadowDy = "3"
+        android:shadowRadius = "5"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_jogador"
+        app:layout_constraintBottom_toTopOf="@+id/novo_nome"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferências"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/PreferênciasDoJogo"
+        android:onClick="prefsJogo"
+        android:background="@drawable/botao_cinza"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/Voltar"
+        android:onClick="MainActivity"
+        android:background="@drawable/botao_cinzento"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

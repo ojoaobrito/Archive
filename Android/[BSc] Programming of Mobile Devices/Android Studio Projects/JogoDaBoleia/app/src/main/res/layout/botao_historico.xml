@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/linear_secundario"
+    android:orientation="vertical" >
+    <ImageButton
+        android:id="@+id/historico"
+        android:visibility="invisible"
+        android:elevation="2dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/botao_fundo_historico"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingLeft="40dp"
+        android:layout_weight="1"
+        android:src="@drawable/historico"
+        android:scaleType="centerCrop"
+        android:paddingTop="30dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="30dp"
+        android:text="\nJogar\n"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+</LinearLayout>

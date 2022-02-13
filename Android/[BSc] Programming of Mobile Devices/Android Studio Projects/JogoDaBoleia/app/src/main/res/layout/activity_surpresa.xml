@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pai"
+    tools:context=".Surpresa">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/final_imagem"
+        android:onClick="guardar"
+        android:src="@drawable/final_imagem"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/texto" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/texto"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        android:textColor="#0059b3"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="Espero que tenhas gostado! \nClica na imagem se a quiseres guardar ;)"
+        app:layout_constraintTop_toBottomOf="@+id/final_imagem"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,2 +1,2 @@
 # Archive
-Full details at www.joaobrito.net/archive
+Full details at www.joaopedrobrito.com/archive

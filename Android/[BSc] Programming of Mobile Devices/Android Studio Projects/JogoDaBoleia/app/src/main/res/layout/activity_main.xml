@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pai"
+    tools:context=".MenuPrincipal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:visibility="invisible"
+        android:src="@drawable/estado0"
+        android:alpha="0.3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/estado"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/pontos"
+        app:layout_constraintTop_toBottomOf="@+id/estado" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/pontos"
+        android:text="Pontos\n0"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#737373"
+        android:textSize="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linear"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/pontos"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/iniciar"
+            android:visibility="invisible"
+            android:elevation="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botao_fundo"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingTop="30dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="30dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:text="\nJogar\n"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/nome"
+        android:text="© 2019 Engenheiro João &quot;John&quot; Brito"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#737373"
+        android:textSize="13dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

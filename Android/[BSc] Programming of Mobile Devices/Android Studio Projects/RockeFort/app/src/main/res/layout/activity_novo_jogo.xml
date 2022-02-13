@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d9d9d9"
+    tools:context=".NovoJogo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titulo"
+        android:text="Novo Jogo"
+        android:layout_marginTop="25dp"
+        android:textSize="40dp"
+        android:textColor="#006bb3"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/novo_nome"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/jogos"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintBottom_toTopOf="@id/novo_username">
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/assassins"
+                android:text="Assassin's Creed"
+                android:layout_width="0dp"
+                android:backgroundTint="#F2F2F2"
+                android:onClick="escolha"
+                android:layout_weight="1"
+                android:layout_height="100dp"/>
+
+            <Button
+                android:id="@+id/lol"
+                android:text="League Of Legends"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:backgroundTint="#F2F2F2"
+                android:onClick="escolha"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="100dp"/>
+
+            <Button
+                android:id="@+id/rocket"
+                android:text="Rocket League"
+                android:backgroundTint="#F2F2F2"
+                android:layout_width="0dp"
+                android:onClick="escolha"
+                android:layout_weight="1"
+                android:layout_height="100dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/cs"
+                android:text="CS:GO"
+                android:layout_width="0dp"
+                android:onClick="escolha"
+                android:backgroundTint="#F2F2F2"
+                android:layout_weight="1"
+                android:layout_height="100dp"/>
+
+            <Button
+                android:id="@+id/fortnite"
+                android:text="Fortnite"
+                android:layout_width="0dp"
+                android:onClick="escolha"
+                android:layout_weight="1"
+                android:backgroundTint="#F2F2F2"
+                android:layout_height="100dp"/>
+
+            <Button
+                android:id="@+id/minecraft"
+                android:text="Minecraft"
+                android:layout_width="0dp"
+                android:backgroundTint="#F2F2F2"
+                android:layout_weight="1"
+                android:onClick="escolha"
+                android:layout_height="100dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="0dp"
+        android:id="@+id/novo_username"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:hint="nome do jogador"
+        android:textAlignment="center"
+        android:backgroundTint="#33adff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jogos"
+        app:layout_constraintBottom_toTopOf="@+id/novo_nivel"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:id="@+id/novo_nivel"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:hint="nível do jogador"
+        android:textAlignment="center"
+        android:backgroundTint="#33adff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/novo_username"
+        app:layout_constraintBottom_toTopOf="@+id/guardar_botao"/>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Concluído"
+        android:textSize="15sp"
+        android:textColor="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/guardar_botao"
+        android:onClick="novoJogo"
+        android:background="@drawable/botao_azul"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

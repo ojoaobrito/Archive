@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/iiiris"
+    tools:context=".Tabuada">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:textAlignment="center"
+        android:text="CONTApelos DEDOSdosPÉS"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="20.0"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/logo"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/boy"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/user"
+        app:layout_constraintBottom_toTopOf="@+id/Nivel"/>
+
+    <TextView
+        android:id="@+id/user"
+        android:text="Nome"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintLeft_toRightOf="@+id/logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Nivel"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Nivel"
+        app:layout_constraintTop_toBottomOf="@id/user"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/igual"
+        android:text="Nível :"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/num1"
+        android:text="1"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/confirmar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/vezes" />
+
+    <ImageView
+        android:id="@+id/vezes"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/x"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintLeft_toRightOf="@+id/num1"
+        app:layout_constraintRight_toLeftOf="@+id/num2"
+        app:layout_constraintBottom_toTopOf="@+id/confirmar"/>
+
+    <TextView
+        android:id="@+id/num2"
+        android:text="3"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintBottom_toTopOf="@+id/confirmar"
+        app:layout_constraintLeft_toRightOf="@+id/vezes"
+        app:layout_constraintRight_toLeftOf="@+id/igual" />
+
+
+    <ImageView
+        android:id="@+id/igual"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/igual"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintLeft_toRightOf="@+id/num2"
+        app:layout_constraintRight_toLeftOf="@+id/resposta"
+        app:layout_constraintBottom_toTopOf="@+id/confirmar"/>
+
+    <EditText
+        android:id="@+id/resposta"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:hint="\?"
+        android:textAlignment="center"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintLeft_toRightOf="@+id/igual"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/confirmar"/>
+
+    <Button
+        android:id="@+id/confirmar"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="Responder"
+        android:onClick="Resposta"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:background="@drawable/botao_azul"
+        app:layout_constraintTop_toBottomOf="@+id/resposta"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/definicoes"/>
+
+
+    <ImageButton
+        android:id="@+id/nivel"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/nivel"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="switch_levels"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toBottomOf="@+id/confirmar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/definicoes"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/definicoes"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/def"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="definicoes"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toBottomOf="@+id/confirmar"
+        app:layout_constraintLeft_toRightOf="@+id/nivel"
+        app:layout_constraintRight_toLeftOf="@+id/historico"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/historico"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hist"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="historico"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toBottomOf="@+id/confirmar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/definicoes"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
